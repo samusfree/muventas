@@ -13,8 +13,9 @@ Public Class mantenimientoItems
         actualizar()
         limpiar()
         Thread.CurrentThread.CurrentCulture = New CultureInfo("es-PE", False)
-        AddHandler cboTipoItem.SelectedIndexChanged, _
+        AddHandler cboTipoItem.SelectedIndexChanged,
         AddressOf cboTipoItem_SelectedIndexChanged
+        Me.WindowState = 2
     End Sub
     Sub actualizar()
         dgItems.DataSource = item.listarporTipoItem(cboTipoItem.SelectedValue)
@@ -50,19 +51,15 @@ Public Class mantenimientoItems
     Private Sub dgItems_CellClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgItems.CellClick
         Try
             txtCodigo.Text = dgItems.CurrentRow.Cells(0).Value
-            cboTipoItem.SelectedValue = dgItems.CurrentRow.Cells(1).Value
-            txtDescripcion.Text = dgItems.CurrentRow.Cells(2).Value
-            txtPrecio.Text = dgItems.CurrentRow.Cells(3).Value
+            cboTipoItem.SelectedValue = dgItems.CurrentRow.Cells(2).Value
+            txtDescripcion.Text = dgItems.CurrentRow.Cells(1).Value
+            txtPrecio.Text = dgItems.CurrentRow.Cells(4).Value
             btnAgregar.Enabled = False
             btnModificar.Enabled = True
 
         Catch ex As Exception
 
         End Try
-    End Sub
-
-    Private Sub dgItems_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgItems.CellContentClick
-
     End Sub
 
     Private Sub btnModificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnModificar.Click

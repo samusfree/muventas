@@ -19,19 +19,24 @@ Partial Class mantenimientoItems
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.txtCodigo = New System.Windows.Forms.TextBox
-        Me.cboTipoItem = New System.Windows.Forms.ComboBox
-        Me.txtDescripcion = New System.Windows.Forms.TextBox
-        Me.txtPrecio = New System.Windows.Forms.TextBox
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.dgItems = New System.Windows.Forms.DataGridView
-        Me.btnAgregar = New System.Windows.Forms.Button
-        Me.btnModificar = New System.Windows.Forms.Button
-        Me.btnCancelar = New System.Windows.Forms.Button
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtCodigo = New System.Windows.Forms.TextBox()
+        Me.cboTipoItem = New System.Windows.Forms.ComboBox()
+        Me.txtDescripcion = New System.Windows.Forms.TextBox()
+        Me.txtPrecio = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.dgItems = New System.Windows.Forms.DataGridView()
+        Me.btnAgregar = New System.Windows.Forms.Button()
+        Me.btnModificar = New System.Windows.Forms.Button()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.codtipoitem = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.desc_tip_item = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgItems, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -56,7 +61,7 @@ Partial Class mantenimientoItems
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(21, 119)
+        Me.Label3.Location = New System.Drawing.Point(359, 52)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(80, 13)
         Me.Label3.TabIndex = 2
@@ -65,7 +70,7 @@ Partial Class mantenimientoItems
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(21, 150)
+        Me.Label4.Location = New System.Drawing.Point(359, 83)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(47, 13)
         Me.Label4.TabIndex = 3
@@ -90,14 +95,14 @@ Partial Class mantenimientoItems
         '
         'txtDescripcion
         '
-        Me.txtDescripcion.Location = New System.Drawing.Point(128, 114)
+        Me.txtDescripcion.Location = New System.Drawing.Point(466, 47)
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(195, 20)
         Me.txtDescripcion.TabIndex = 6
         '
         'txtPrecio
         '
-        Me.txtPrecio.Location = New System.Drawing.Point(128, 145)
+        Me.txtPrecio.Location = New System.Drawing.Point(466, 78)
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.Size = New System.Drawing.Size(100, 20)
         Me.txtPrecio.TabIndex = 7
@@ -114,18 +119,23 @@ Partial Class mantenimientoItems
         '
         'dgItems
         '
+        Me.dgItems.AllowUserToAddRows = False
+        Me.dgItems.AllowUserToDeleteRows = False
+        Me.dgItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgItems.Location = New System.Drawing.Point(24, 181)
+        Me.dgItems.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.codigo, Me.nombre, Me.codtipoitem, Me.desc_tip_item, Me.precio})
+        Me.dgItems.Location = New System.Drawing.Point(24, 146)
         Me.dgItems.Name = "dgItems"
+        Me.dgItems.ReadOnly = True
         Me.dgItems.ShowCellErrors = False
-        Me.dgItems.Size = New System.Drawing.Size(548, 289)
+        Me.dgItems.Size = New System.Drawing.Size(916, 478)
         Me.dgItems.TabIndex = 9
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(377, 57)
+        Me.btnAgregar.Location = New System.Drawing.Point(782, 47)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAgregar.Size = New System.Drawing.Size(180, 23)
         Me.btnAgregar.TabIndex = 10
         Me.btnAgregar.Text = "AGREGAR"
         Me.btnAgregar.UseVisualStyleBackColor = True
@@ -133,27 +143,67 @@ Partial Class mantenimientoItems
         'btnModificar
         '
         Me.btnModificar.Enabled = False
-        Me.btnModificar.Location = New System.Drawing.Point(377, 92)
+        Me.btnModificar.Location = New System.Drawing.Point(782, 82)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(75, 23)
+        Me.btnModificar.Size = New System.Drawing.Size(180, 23)
         Me.btnModificar.TabIndex = 11
         Me.btnModificar.Text = "MODIFICAR"
         Me.btnModificar.UseVisualStyleBackColor = True
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(378, 127)
+        Me.btnCancelar.Location = New System.Drawing.Point(783, 117)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancelar.Size = New System.Drawing.Size(180, 23)
         Me.btnCancelar.TabIndex = 12
         Me.btnCancelar.Text = "CANCELAR"
         Me.btnCancelar.UseVisualStyleBackColor = True
+        '
+        'codigo
+        '
+        Me.codigo.DataPropertyName = "cod_item"
+        Me.codigo.HeaderText = "Codigo"
+        Me.codigo.Name = "codigo"
+        Me.codigo.ReadOnly = True
+        Me.codigo.Width = 65
+        '
+        'nombre
+        '
+        Me.nombre.DataPropertyName = "descripcion"
+        Me.nombre.HeaderText = "Nombre"
+        Me.nombre.Name = "nombre"
+        Me.nombre.ReadOnly = True
+        Me.nombre.Width = 69
+        '
+        'codtipoitem
+        '
+        Me.codtipoitem.DataPropertyName = "cod_tipoitem"
+        Me.codtipoitem.HeaderText = "Codigo Tipo Item"
+        Me.codtipoitem.Name = "codtipoitem"
+        Me.codtipoitem.ReadOnly = True
+        Me.codtipoitem.Width = 85
+        '
+        'desc_tip_item
+        '
+        Me.desc_tip_item.DataPropertyName = "desc_tipo_item"
+        Me.desc_tip_item.HeaderText = "Desc. Tipo Item"
+        Me.desc_tip_item.Name = "desc_tip_item"
+        Me.desc_tip_item.ReadOnly = True
+        Me.desc_tip_item.Width = 80
+        '
+        'precio
+        '
+        Me.precio.DataPropertyName = "precio"
+        Me.precio.HeaderText = "Precio"
+        Me.precio.Name = "precio"
+        Me.precio.ReadOnly = True
+        Me.precio.Width = 62
         '
         'mantenimientoItems
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(640, 482)
+        Me.ClientSize = New System.Drawing.Size(984, 636)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnAgregar)
@@ -187,4 +237,9 @@ Partial Class mantenimientoItems
     Friend WithEvents btnAgregar As System.Windows.Forms.Button
     Friend WithEvents btnModificar As System.Windows.Forms.Button
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
+    Friend WithEvents codigo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents nombre As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents codtipoitem As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents desc_tip_item As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents precio As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
