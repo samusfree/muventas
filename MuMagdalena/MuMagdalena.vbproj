@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{82B449AA-019D-4484-A764-57514F9C719F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SistemaVentas.menuPrincipal</StartupObject>
+    <RootNamespace>SistemaVentas</RootNamespace>
+    <AssemblyName>Sistema de Ventas</AssemblyName>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>D7DEDF7E0698864FEEC00F3517BF7D6F3EAE33B2</ManifestCertificateThumbprint>
+    <ManifestKeyFile>serieMagdalena.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <TargetZone>LocalIntranet</TargetZone>
+    <DelaySign>false</DelaySign>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>d:\samus\Desktop\Magdalena\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>http://sptechnologies.co.cc</SupportUrl>
+    <TargetCulture>es-PE</TargetCulture>
+    <ProductName>Sistema de Ventas Mu</ProductName>
+    <PublisherName>SP Technologies</PublisherName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>41</ApplicationRevision>
+    <ApplicationVersion>1.0.0.41</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Sistema de Ventas.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>None</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Sistema de Ventas.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Clases\ClaseBloqueo.vb" />
+    <Compile Include="Clases\ClaseCambioDatos.vb" />
+    <Compile Include="Clases\ClaseCambioNombre.vb" />
+    <Compile Include="Clases\ClaseItem.vb" />
+    <Compile Include="Clases\ClaseRaza.vb" />
+    <Compile Include="Clases\ClaseVenta.vb" />
+    <Compile Include="Entidades\BeanBloqueo.vb" />
+    <Compile Include="Entidades\BeanCambioDatos.vb" />
+    <Compile Include="Entidades\BeanCambioNombre.vb" />
+    <Compile Include="Entidades\BeanDetalle.vb" />
+    <Compile Include="Entidades\BeanDetalleCompleto.vb" />
+    <Compile Include="Entidades\BeanDetalleMixto.vb" />
+    <Compile Include="Entidades\BeanItems.vb" />
+    <Compile Include="Entidades\BeanUsuario.vb" />
+    <Compile Include="Entidades\BeanVenta.vb" />
+    <Compile Include="Entidades\BeanVentaActualizar.vb" />
+    <Compile Include="Entidades\BeanVentaCompleto.vb" />
+    <Compile Include="Formularios\about.Designer.vb">
+      <DependentUpon>about.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\about.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\actualizarCambioDatos.Designer.vb">
+      <DependentUpon>actualizarCambioDatos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\actualizarCambioDatos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\actualizarCambioNombre.Designer.vb">
+      <DependentUpon>actualizarCambioNombre.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\actualizarCambioNombre.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\actualizarDetalle.Designer.vb">
+      <DependentUpon>actualizarDetalle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\actualizarDetalle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\bloqueodecuentas.Designer.vb">
+      <DependentUpon>bloqueodecuentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\bloqueodecuentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\cambioDatos.Designer.vb">
+      <DependentUpon>cambioDatos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\cambioDatos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\cambiodeNombre.Designer.vb">
+      <DependentUpon>cambiodeNombre.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\cambiodeNombre.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clases\ClaseConexion.vb" />
+    <Compile Include="Clases\ClaseTipoItem.vb" />
+    <Compile Include="Clases\ClaseUsuario.vb" />
+    <Compile Include="Formularios\cambionombrefechas.Designer.vb">
+      <DependentUpon>cambionombrefechas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\cambionombrefechas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\cambionombrehistorico.Designer.vb">
+      <DependentUpon>cambionombrehistorico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\cambionombrehistorico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\consultabloqueo.Designer.vb">
+      <DependentUpon>consultabloqueo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\consultabloqueo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\consultabloqueohistorico.Designer.vb">
+      <DependentUpon>consultabloqueohistorico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\consultabloqueohistorico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\consultaCambioDatos.Designer.vb">
+      <DependentUpon>consultaCambioDatos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\consultaCambioDatos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\consultaCambioDatosHistorico.Designer.vb">
+      <DependentUpon>consultaCambioDatosHistorico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\consultaCambioDatosHistorico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\consultacambionombre.Designer.vb">
+      <DependentUpon>consultacambionombre.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\consultacambionombre.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\desbloqueocuentas.Designer.vb">
+      <DependentUpon>desbloqueocuentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\desbloqueocuentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\detalleventa.Designer.vb">
+      <DependentUpon>detalleventa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\detalleventa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\agregarDetalleItemsVenta.Designer.vb">
+      <DependentUpon>agregarDetalleItemsVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\agregarDetalleItemsVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ventasxidhistorico.Designer.vb">
+      <DependentUpon>ventasxidhistorico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ventasxidhistorico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ventaxID.Designer.vb">
+      <DependentUpon>ventaxID.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ventaxID.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\mantenimientoItems.Designer.vb">
+      <DependentUpon>mantenimientoItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\mantenimientoItems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\mantenimientoUsuarios.Designer.vb">
+      <DependentUpon>mantenimientoUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\mantenimientoUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\menuPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\menuPrincipal.Designer.vb">
+      <DependentUpon>menuPrincipal.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Formularios\ventas.Designer.vb">
+      <DependentUpon>ventas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ventas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ventaentrefechas.Designer.vb">
+      <DependentUpon>ventaentrefechas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ventaentrefechas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Formularios\about.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>about.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\actualizarCambioDatos.resx">
+      <DependentUpon>actualizarCambioDatos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\actualizarCambioNombre.resx">
+      <DependentUpon>actualizarCambioNombre.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\actualizarDetalle.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>actualizarDetalle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\agregarDetalleItemsVenta.resx">
+      <DependentUpon>agregarDetalleItemsVenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\bloqueodecuentas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>bloqueodecuentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\cambioDatos.resx">
+      <DependentUpon>cambioDatos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\cambiodeNombre.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cambiodeNombre.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\cambionombrefechas.resx">
+      <DependentUpon>cambionombrefechas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\cambionombrehistorico.resx">
+      <DependentUpon>cambionombrehistorico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\consultabloqueo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>consultabloqueo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\consultabloqueohistorico.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>consultabloqueohistorico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\consultaCambioDatos.resx">
+      <DependentUpon>consultaCambioDatos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\consultaCambioDatosHistorico.resx">
+      <DependentUpon>consultaCambioDatosHistorico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\consultacambionombre.resx">
+      <DependentUpon>consultacambionombre.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\desbloqueocuentas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>desbloqueocuentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\detalleventa.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>detalleventa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ventasxidhistorico.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ventasxidhistorico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ventaxID.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ventaxID.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\login.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\mantenimientoItems.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>mantenimientoItems.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\mantenimientoUsuarios.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>mantenimientoUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\menuPrincipal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>menuPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ventas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ventas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ventaentrefechas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ventaentrefechas.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <BaseApplicationManifest Include="My Project\app.manifest" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\logo.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
