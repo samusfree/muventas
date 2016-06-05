@@ -2,8 +2,8 @@ Imports System.Windows.Forms
 
 Public Class cambiodeNombre
     Dim WithEvents cnombre As New clasecambionombre
-    Dim usuario As New claseUsuario
-    Dim raza As New ClaseRaza
+    Dim usuario As New ClaseUsuario
+    Dim parametro As New ParametroDAOImpl
 
 
     Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
@@ -82,18 +82,9 @@ Public Class cambiodeNombre
         Me.MdiParent = menuPrincipal
         txtIdAntiguo.Focus()
         cboRaza.Items.Clear()
-        cboRaza.DataSource = raza.listado
-        cboRaza.DisplayMember = "identificador_raza"
-        cboRaza.ValueMember = "cod_raza"
-
-        'With cboRaza.Items
-        '    .Add("BK")
-        '    .Add("SM")
-        '    .Add("ELF")
-        '    .Add("MG")
-        '    .Add("DL")
-        '    .Add("SUM")
-        'End With
+        cboRaza.DataSource = parametro.listado(AppConstants.ParametroRaza, Nothing)
+        cboRaza.DisplayMember = "descripcion"
+        cboRaza.ValueMember = "codigo"
 
         With cboModalidadPago.Items
             .Add("EFECTIVO")
@@ -106,7 +97,7 @@ Public Class cambiodeNombre
 
         cboModalidadPago.SelectedIndex = 0
 
-        'cboRaza.SelectedIndex = 0
+        cboRaza.SelectedIndex = 0
 
         txtVendedor.Text = menuPrincipal.cod_usuario
     End Sub

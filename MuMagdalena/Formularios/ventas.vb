@@ -4,8 +4,8 @@ Imports System.Windows.Forms
 Imports System.Data
 
 Public Class ventas
-    Dim WithEvents tipoitem As New claseTipoItem
-    Dim WithEvents usuario As New claseUsuario
+    Dim parametros As New ParametroDAOImpl
+    Dim WithEvents usuario As New ClaseUsuario
     Dim WithEvents item As New claseItem
     Dim WithEvents venta As New ClaseVenta
 
@@ -13,15 +13,15 @@ Public Class ventas
         MdiParent = menuPrincipal
         RemoveHandler cboTipoItem.SelectedIndexChanged, AddressOf cboTipoItem_SelectedIndexChanged
         'agregando seleccion por defecto
-        Dim dtTipoItems As DataTable = tipoitem.listar
+        Dim dtTipoItems As DataTable = parametros.listado(AppConstants.ParametroTipoItem, Nothing)
         Dim rowTipoItems As DataRow = dtTipoItems.NewRow
         rowTipoItems("descripcion") = "Seleccione un Item"
-        rowTipoItems("cod_tipoitem") = "0"
+        rowTipoItems("codigo") = "0"
         dtTipoItems.Rows.InsertAt(rowTipoItems, 0)
 
         cboTipoItem.DataSource = dtTipoItems
         cboTipoItem.DisplayMember = "descripcion"
-        cboTipoItem.ValueMember = "cod_tipoitem"
+        cboTipoItem.ValueMember = "codigo"
 
         txtVendedor.Text = menuPrincipal.cod_usuario
         With cboModalidadPago.Items
@@ -38,7 +38,7 @@ Public Class ventas
         cboNivel.Items.Add("13")
         cboNivel.Items.Add("15")
 
-        cboNivel.SelectedIndex = 0
+        cboNivel.SelectedIndex = 1
         cboModalidadPago.SelectedIndex = 0
         cboTipoItem.SelectedIndex = 0
 
@@ -62,10 +62,6 @@ Public Class ventas
 
 
     Private Sub usuario_mensaje(ByVal mensaje As String) Handles usuario.mensaje
-        MessageBox.Show(mensaje, "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-    End Sub
-
-    Private Sub tipoitem_mensaje(ByVal mensaje As String) Handles tipoitem.mensaje
         MessageBox.Show(mensaje, "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     End Sub
 
@@ -172,16 +168,16 @@ Public Class ventas
     End Sub
 
     Private Sub cboTipoItem_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboTipoItem.SelectedIndexChanged
-        Dim dtItems As DataTable = item.listarporTipoItem(cboTipoItem.SelectedValue)
+        Dim dtItems As DataTable = parametros.listado(AppConstants.ParametroTipoItem, cboTipoItem.SelectedValue)
         Dim rowItems As DataRow = dtItems.NewRow
         rowItems("descripcion") = "Seleccione un Item"
-        rowItems("cod_item") = "0"
+        rowItems("codigo") = "0"
         dtItems.Rows.InsertAt(rowItems, 0)
 
         cboItem.DataSource = dtItems
         With cboItem
             .DisplayMember = "descripcion"
-            .ValueMember = "cod_item"
+            .ValueMember = "codigo"
         End With
     End Sub
 

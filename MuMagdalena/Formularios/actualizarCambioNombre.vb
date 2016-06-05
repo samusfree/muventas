@@ -7,7 +7,8 @@ Public Class actualizarCambioNombre
     Dim cod_cambio As Integer = Nothing
     Dim bean As BeanCambionombre
     Dim tipo As Integer
-    Dim raza As New ClaseRaza
+    Dim parametro As New ParametroDAOImpl
+
     Private Sub actualizarCambioNombre_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         MdiParent = menuPrincipal
 
@@ -24,9 +25,9 @@ Public Class actualizarCambioNombre
 
         Try
             cboRaza.Items.Clear()
-            cboRaza.DataSource = raza.listado
-            cboRaza.DisplayMember = "identificador_raza"
-            cboRaza.ValueMember = "cod_raza"
+            cboRaza.DataSource = parametro.listado(AppConstants.ParametroRaza, Nothing)
+            cboRaza.DisplayMember = "descripcion"
+            cboRaza.ValueMember = "codigo"
 
             bean = New BeanCambionombre()
             bean = cambio_nombre.obtenerCambioNombre(Me.cod_cambio)

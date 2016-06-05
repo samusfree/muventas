@@ -3,7 +3,7 @@ Imports System.Threading
 Imports System.Windows.Forms
 
 Public Class detalleventa
-    Dim WithEvents tipoitem As New claseTipoItem
+    Dim parametros As New ParametroDAOImpl
     Dim WithEvents item As New claseItem
     Dim WithEvents venta As New claseVenta
     Dim cod_venta As Integer = Nothing
@@ -13,9 +13,9 @@ Public Class detalleventa
     Private Sub detalleventa_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         txtCodigoVenta.Enabled = False
         MdiParent = menuPrincipal
-        CboTipoItem.DataSource = tipoitem.listar
+        CboTipoItem.DataSource = parametros.listado(AppConstants.ParametroTipoItem, Nothing)
         CboTipoItem.DisplayMember = "descripcion"
-        CboTipoItem.ValueMember = "cod_tipoitem"
+        CboTipoItem.ValueMember = "codigo"
         Thread.CurrentThread.CurrentCulture = New CultureInfo("es-PE", False)
         Try
             bean = New BeanDetalleCompleto
@@ -25,9 +25,9 @@ Public Class detalleventa
             txtCantidad.Text = bean.cantidad
             txtEstado.Text = bean.estado
             txtFechaVenta.Text = bean.fecha_venta
-            cboItem.DataSource = item.listarporTipoItem(CboTipoItem.SelectedValue)
+            cboItem.DataSource = parametros.listado(AppConstants.ParametroTipoItem, CboTipoItem.SelectedValue)
             cboItem.DisplayMember = "descripcion"
-            cboItem.ValueMember = "cod_item"
+            cboItem.ValueMember = "codigo"
             cboItem.SelectedValue = bean.cod_item
             txtLogin.Text = bean.login
             txtModalidad.Text = bean.modalidad
@@ -56,10 +56,6 @@ Public Class detalleventa
         Me.serie = serie
     End Sub
 
-    Private Sub tipoitem_mensaje(ByVal mensaje As String) Handles tipoitem.mensaje
-        MessageBox.Show(mensaje, "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-    End Sub
-
     Private Sub venta_confirmacion(ByVal contenido As String) Handles venta.confirmacion
         MessageBox.Show(contenido, "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
@@ -72,4 +68,7 @@ Public Class detalleventa
         MessageBox.Show(mensaje, "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     End Sub
 
+    Private Sub txtObservacion_TextChanged(sender As Object, e As EventArgs) Handles txtObservacion.TextChanged
+
+    End Sub
 End Class

@@ -3,13 +3,13 @@ Imports System.Globalization
 Imports System.Windows.Forms
 
 Public Class mantenimientoItems
-    Dim tipoitem As New claseTipoItem
+    Dim parametros As New ParametroDAOImpl
     Dim item As New claseItem
     Private Sub mantenimientoItems_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         MdiParent = menuPrincipal
-        cboTipoItem.DataSource = tipoitem.listar
+        cboTipoItem.DataSource = parametros.listado(AppConstants.ParametroTipoItem, Nothing)
         cboTipoItem.DisplayMember = "descripcion"
-        cboTipoItem.ValueMember = "cod_tipoitem"
+        cboTipoItem.ValueMember = "codigo"
         actualizar()
         limpiar()
         Thread.CurrentThread.CurrentCulture = New CultureInfo("es-PE", False)
@@ -18,7 +18,7 @@ Public Class mantenimientoItems
         Me.WindowState = 2
     End Sub
     Sub actualizar()
-        dgItems.DataSource = item.listarporTipoItem(cboTipoItem.SelectedValue)
+        dgItems.DataSource = parametros.listado(AppConstants.ParametroItem, cboTipoItem.SelectedValue)
     End Sub
 
     Sub limpiar()
@@ -85,6 +85,6 @@ Public Class mantenimientoItems
     End Sub
 
     Private Sub cboTipoItem_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        dgItems.DataSource = item.listarporTipoItem(cboTipoItem.SelectedValue)
+        dgItems.DataSource = item.listarporTipoItem(cboTipoItem.SelectedValue )
     End Sub
 End Class

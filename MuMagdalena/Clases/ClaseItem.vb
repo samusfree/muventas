@@ -1,12 +1,14 @@
 Imports System.Data.SqlClient
 Imports System.Data
 Public Class claseItem
-    Dim cn As New claseconexion
+    Dim cn As New ClaseConexion
     Event mensaje(ByVal mensaje As String)
-    Public Function listado() As DataTable
+
+    Public Function listarporTipoItem(ByVal cod_tipoitem As Integer) As DataTable
         Try
-            Dim da As New SqlDataAdapter("listarItems", cn.getConexion)
+            Dim da As New SqlDataAdapter("listarItemsxTipoItems", cn.getConexion)
             da.SelectCommand.CommandType = CommandType.StoredProcedure
+            da.SelectCommand.Parameters.Add("@cod_tipoitem", SqlDbType.Int).Value = cod_tipoitem
             Dim tabla As New DataTable
             da.Fill(tabla)
             Return tabla
@@ -50,19 +52,6 @@ Public Class claseItem
         End Try
     End Sub
 
-    Public Function listarporTipoItem(ByVal cod_tipoitem As Integer) As DataTable
-        Try
-            Dim da As New SqlDataAdapter("listarItemsxTipoItems", cn.getConexion)
-            da.SelectCommand.CommandType = CommandType.StoredProcedure
-            da.SelectCommand.Parameters.Add("@cod_tipoitem", SqlDbType.Int).Value = cod_tipoitem
-            Dim tabla As New DataTable
-            da.Fill(tabla)
-            Return tabla
-        Catch ex As Exception
-            RaiseEvent mensaje(ex.Message)
-        End Try
-        Return Nothing
-    End Function
     Public Function devolveritem(ByVal cod_item As Integer) As Double
         Try
             Dim da As New SqlDataAdapter("devolveritem", cn.getConexion)

@@ -277,7 +277,7 @@ Partial Class ventas
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(508, 66)
+        Me.Label16.Location = New System.Drawing.Point(600, 66)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(38, 13)
         Me.Label16.TabIndex = 17
@@ -287,22 +287,22 @@ Partial Class ventas
         '
         Me.cboNivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboNivel.FormattingEnabled = True
-        Me.cboNivel.Location = New System.Drawing.Point(584, 63)
+        Me.cboNivel.Location = New System.Drawing.Point(656, 63)
         Me.cboNivel.Name = "cboNivel"
-        Me.cboNivel.Size = New System.Drawing.Size(115, 21)
+        Me.cboNivel.Size = New System.Drawing.Size(54, 21)
         Me.cboNivel.TabIndex = 16
         '
         'txtSerie
         '
-        Me.txtSerie.Location = New System.Drawing.Point(137, 69)
+        Me.txtSerie.Location = New System.Drawing.Point(148, 69)
         Me.txtSerie.Name = "txtSerie"
-        Me.txtSerie.Size = New System.Drawing.Size(120, 20)
+        Me.txtSerie.Size = New System.Drawing.Size(193, 20)
         Me.txtSerie.TabIndex = 13
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(61, 69)
+        Me.Label13.Location = New System.Drawing.Point(72, 69)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(39, 13)
         Me.Label13.TabIndex = 12
@@ -312,7 +312,7 @@ Partial Class ventas
         '
         Me.cboItem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboItem.FormattingEnabled = True
-        Me.cboItem.Location = New System.Drawing.Point(442, 19)
+        Me.cboItem.Location = New System.Drawing.Point(453, 19)
         Me.cboItem.Name = "cboItem"
         Me.cboItem.Size = New System.Drawing.Size(257, 21)
         Me.cboItem.TabIndex = 9
@@ -331,14 +331,14 @@ Partial Class ventas
         '
         Me.cboTipoItem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboTipoItem.FormattingEnabled = True
-        Me.cboTipoItem.Location = New System.Drawing.Point(137, 24)
+        Me.cboTipoItem.Location = New System.Drawing.Point(148, 24)
         Me.cboTipoItem.Name = "cboTipoItem"
         Me.cboTipoItem.Size = New System.Drawing.Size(193, 21)
         Me.cboTipoItem.TabIndex = 6
         '
         'txtPrecioVenta
         '
-        Me.txtPrecioVenta.Location = New System.Drawing.Point(387, 66)
+        Me.txtPrecioVenta.Location = New System.Drawing.Point(479, 66)
         Me.txtPrecioVenta.Name = "txtPrecioVenta"
         Me.txtPrecioVenta.Size = New System.Drawing.Size(95, 20)
         Me.txtPrecioVenta.TabIndex = 5
@@ -347,7 +347,7 @@ Partial Class ventas
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(276, 69)
+        Me.Label12.Location = New System.Drawing.Point(368, 69)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(86, 13)
         Me.Label12.TabIndex = 4
@@ -356,7 +356,7 @@ Partial Class ventas
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(357, 24)
+        Me.Label11.Location = New System.Drawing.Point(368, 24)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(59, 13)
         Me.Label11.TabIndex = 2
@@ -365,7 +365,7 @@ Partial Class ventas
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(61, 27)
+        Me.Label10.Location = New System.Drawing.Point(72, 27)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(61, 13)
         Me.Label10.TabIndex = 0

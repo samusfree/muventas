@@ -3,7 +3,7 @@ Imports System.Globalization
 Imports System.Windows.Forms
 
 Public Class actualizarDetalle
-    Dim WithEvents tipoitem As New claseTipoItem
+    Dim parametro As New ParametroDAOImpl
     Dim WithEvents item As New claseItem
     Dim WithEvents venta As New claseVenta
     Dim cod_venta As Integer = Nothing
@@ -44,13 +44,13 @@ Public Class actualizarDetalle
             txtFechaVenta.Text = bean.fecha_venta
             'quito el evento
             RemoveHandler cboTipoItem.SelectedIndexChanged, AddressOf cboTipoItem_SelectedIndexChanged
-            cboTipoItem.DataSource = tipoitem.listar
+            cboTipoItem.DataSource = parametro.listado(AppConstants.ParametroTipoItem, Nothing)
             cboTipoItem.DisplayMember = "descripcion"
-            cboTipoItem.ValueMember = "cod_tipoitem"
+            cboTipoItem.ValueMember = "codigo"
             cboTipoItem.SelectedValue = bean.cod_tipoitem
-            cboItem.DataSource = item.listarporTipoItem(cboTipoItem.SelectedValue)
+            cboItem.DataSource = parametro.listado(AppConstants.ParametroItem, cboTipoItem.SelectedValue)
             cboItem.DisplayMember = "descripcion"
-            cboItem.ValueMember = "cod_item"
+            cboItem.ValueMember = "codigo"
             cboItem.SelectedValue = bean.cod_item
             txtLogin.Text = bean.login
             cboModalidadPago.SelectedItem = bean.modalidad
@@ -81,10 +81,6 @@ Public Class actualizarDetalle
         Me.cod_item = cod_item
         Me.cod_venta = cod_venta
         Me.serie = serie
-    End Sub
-
-    Private Sub tipoitem_mensaje(ByVal mensaje As String) Handles tipoitem.mensaje
-        MessageBox.Show(mensaje, "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     End Sub
 
     Private Sub venta_confirmacion(ByVal contenido As String) Handles venta.confirmacion
@@ -183,10 +179,10 @@ Public Class actualizarDetalle
     End Sub
 
     Private Sub cboTipoItem_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboTipoItem.SelectedIndexChanged
-        cboItem.DataSource = item.listarporTipoItem(cboTipoItem.SelectedValue)
+        cboItem.DataSource = parametro.listado(AppConstants.ParametroItem, cboTipoItem.SelectedValue)
         With cboItem
             .DisplayMember = "descripcion"
-            .ValueMember = "cod_item"
+            .ValueMember = "codigo"
         End With
     End Sub
 End Class
