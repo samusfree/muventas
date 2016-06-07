@@ -19,18 +19,21 @@ Partial Class ventasxidhistorico
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.dgVentas = New System.Windows.Forms.DataGridView
-        Me.btnLimpiar = New System.Windows.Forms.Button
-        Me.btnConsultar = New System.Windows.Forms.Button
-        Me.txtLogin = New System.Windows.Forms.TextBox
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.btnserie = New System.Windows.Forms.Button
-        Me.btnMTCN = New System.Windows.Forms.Button
+        Me.dgVentas = New System.Windows.Forms.DataGridView()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.btnConsultar = New System.Windows.Forms.Button()
+        Me.txtLogin = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnserie = New System.Windows.Forms.Button()
+        Me.btnMTCN = New System.Windows.Forms.Button()
         CType(Me.dgVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgVentas
         '
+        Me.dgVentas.AllowUserToAddRows = False
+        Me.dgVentas.AllowUserToDeleteRows = False
+        Me.dgVentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgVentas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.dgVentas.Location = New System.Drawing.Point(11, 57)

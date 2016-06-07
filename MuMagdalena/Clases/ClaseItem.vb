@@ -6,7 +6,7 @@ Public Class claseItem
 
     Public Function listarporTipoItem(ByVal cod_tipoitem As Integer) As DataTable
         Try
-            Dim da As New SqlDataAdapter("listarItemsxTipoItems", cn.getConexion)
+            Dim da As New SqlDataAdapter("SP_ITEM_OBTENER_POR_TIPO", cn.getConexion)
             da.SelectCommand.CommandType = CommandType.StoredProcedure
             da.SelectCommand.Parameters.Add("@cod_tipoitem", SqlDbType.Int).Value = cod_tipoitem
             Dim tabla As New DataTable
@@ -70,12 +70,7 @@ Public Class claseItem
 
     Public Function devolverListaItemsHijos(ByVal cod_item As Integer) As List(Of BeanItems)
         Try
-            Dim da As New SqlDataAdapter("obtenerItemsHijos", cn.getConexion)
-            da.SelectCommand.CommandType = CommandType.StoredProcedure
-            da.SelectCommand.Parameters.Add("@codItem", SqlDbType.Int).Value = cod_item
-            cn.getConexion.Open()
-            Dim tabla As New DataTable
-            da.Fill(tabla)
+            Dim tabla As DataTable = devolverListaItemsHijosDataTable(cod_item)
 
             Dim list As List(Of BeanItems) = New List(Of BeanItems)
 
@@ -100,7 +95,7 @@ Public Class claseItem
 
     Public Function devolverListaItemsHijosDataTable(ByVal cod_item As Integer) As DataTable
         Try
-            Dim da As New SqlDataAdapter("obtenerItemsHijos", cn.getConexion)
+            Dim da As New SqlDataAdapter("SP_ITEM_OBTENER_HIJOS", cn.getConexion)
             da.SelectCommand.CommandType = CommandType.StoredProcedure
             da.SelectCommand.Parameters.Add("@codItem", SqlDbType.Int).Value = cod_item
             cn.getConexion.Open()

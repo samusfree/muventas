@@ -205,22 +205,6 @@ Public Class ClaseVenta
         Return Nothing
     End Function
 
-    'es para listar los items vendidos en las ventas x id del jugador
-    Public Function ventasxextranjerologin(ByVal id_jugador As String) As DataTable
-        Try
-            Dim da As New SqlDataAdapter("ventasxextranjerologin", cn.getConexion)
-            da.SelectCommand.CommandType = CommandType.StoredProcedure
-            da.SelectCommand.Parameters.Add("@id_jugador",
-            SqlDbType.VarChar).Value = id_jugador
-            Dim tabla As New DataTable
-            da.Fill(tabla)
-            Return tabla
-        Catch ex As Exception
-            RaiseEvent mensaje(ex.Message)
-        End Try
-        Return Nothing
-    End Function
-
 
     Public Function ventasxidhistorico(ByVal id_jugar As String) As DataTable
         Try

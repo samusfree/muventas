@@ -23,22 +23,28 @@ Partial Class mantenimientoItemsPadre
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.cboItem = New System.Windows.Forms.ComboBox()
         Me.cboTipoItem = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.cboItemHijo = New System.Windows.Forms.ComboBox()
+        Me.cboTipoItemHijo = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnAgregar = New System.Windows.Forms.Button()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.cboCerrar = New System.Windows.Forms.Button()
+        Me.dgItems = New System.Windows.Forms.DataGridView()
+        Me.correlativo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cod_item = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tipoItem = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.dgItems, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -52,15 +58,7 @@ Partial Class mantenimientoItemsPadre
         Me.GroupBox1.Size = New System.Drawing.Size(662, 75)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Datos"
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(13, 185)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(959, 439)
-        Me.DataGridView1.TabIndex = 1
+        Me.GroupBox1.Text = "Item Padre"
         '
         'cboItem
         '
@@ -85,23 +83,23 @@ Partial Class mantenimientoItemsPadre
         Me.Label11.AutoSize = True
         Me.Label11.Location = New System.Drawing.Point(302, 36)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(59, 13)
+        Me.Label11.Size = New System.Drawing.Size(48, 13)
         Me.Label11.TabIndex = 11
-        Me.Label11.Text = "ITEM/SET"
+        Me.Label11.Text = "Item/Set"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(6, 39)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(61, 13)
+        Me.Label10.Size = New System.Drawing.Size(66, 13)
         Me.Label10.TabIndex = 10
-        Me.Label10.Text = "TIPO ITEM"
+        Me.Label10.Text = "Tipo de Item"
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.ComboBox1)
-        Me.GroupBox2.Controls.Add(Me.ComboBox2)
+        Me.GroupBox2.Controls.Add(Me.cboItemHijo)
+        Me.GroupBox2.Controls.Add(Me.cboTipoItemHijo)
         Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 104)
@@ -109,105 +107,169 @@ Partial Class mantenimientoItemsPadre
         Me.GroupBox2.Size = New System.Drawing.Size(663, 75)
         Me.GroupBox2.TabIndex = 14
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Datos"
+        Me.GroupBox2.Text = "Item Hijo"
         '
-        'ComboBox1
+        'cboItemHijo
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(387, 31)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(257, 21)
-        Me.ComboBox1.TabIndex = 13
+        Me.cboItemHijo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboItemHijo.FormattingEnabled = True
+        Me.cboItemHijo.Location = New System.Drawing.Point(387, 31)
+        Me.cboItemHijo.Name = "cboItemHijo"
+        Me.cboItemHijo.Size = New System.Drawing.Size(257, 21)
+        Me.cboItemHijo.TabIndex = 13
         '
-        'ComboBox2
+        'cboTipoItemHijo
         '
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(82, 36)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(193, 21)
-        Me.ComboBox2.TabIndex = 12
+        Me.cboTipoItemHijo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboTipoItemHijo.FormattingEnabled = True
+        Me.cboTipoItemHijo.Location = New System.Drawing.Point(82, 36)
+        Me.cboTipoItemHijo.Name = "cboTipoItemHijo"
+        Me.cboTipoItemHijo.Size = New System.Drawing.Size(193, 21)
+        Me.cboTipoItemHijo.TabIndex = 12
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(302, 36)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(59, 13)
+        Me.Label1.Size = New System.Drawing.Size(48, 13)
         Me.Label1.TabIndex = 11
-        Me.Label1.Text = "ITEM/SET"
+        Me.Label1.Text = "Item/Set"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(6, 39)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(61, 13)
+        Me.Label2.Size = New System.Drawing.Size(66, 13)
         Me.Label2.TabIndex = 10
-        Me.Label2.Text = "TIPO ITEM"
+        Me.Label2.Text = "Tipo de Item"
         '
-        'Button1
+        'btnAgregar
         '
-        Me.Button1.Location = New System.Drawing.Point(812, 29)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 15
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnAgregar.Location = New System.Drawing.Point(773, 13)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(136, 32)
+        Me.btnAgregar.TabIndex = 15
+        Me.btnAgregar.Text = "AGREGAR"
+        Me.btnAgregar.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnCancelar
         '
-        Me.Button2.Location = New System.Drawing.Point(812, 64)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 16
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnCancelar.Location = New System.Drawing.Point(773, 65)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(136, 33)
+        Me.btnCancelar.TabIndex = 16
+        Me.btnCancelar.Text = "CANCELAR"
+        Me.btnCancelar.UseVisualStyleBackColor = True
         '
-        'Button3
+        'cboCerrar
         '
-        Me.Button3.Location = New System.Drawing.Point(812, 104)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 17
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.cboCerrar.Location = New System.Drawing.Point(773, 116)
+        Me.cboCerrar.Name = "cboCerrar"
+        Me.cboCerrar.Size = New System.Drawing.Size(136, 37)
+        Me.cboCerrar.TabIndex = 17
+        Me.cboCerrar.Text = "CERRAR"
+        Me.cboCerrar.UseVisualStyleBackColor = True
+        '
+        'dgItems
+        '
+        Me.dgItems.AllowUserToAddRows = False
+        Me.dgItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgItems.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.correlativo, Me.cod_item, Me.descripcion, Me.tipoItem, Me.precio})
+        Me.dgItems.Location = New System.Drawing.Point(12, 197)
+        Me.dgItems.Name = "dgItems"
+        Me.dgItems.ReadOnly = True
+        Me.dgItems.Size = New System.Drawing.Size(809, 427)
+        Me.dgItems.TabIndex = 18
+        '
+        'correlativo
+        '
+        Me.correlativo.DataPropertyName = "correlativo"
+        Me.correlativo.HeaderText = "#"
+        Me.correlativo.Name = "correlativo"
+        Me.correlativo.ReadOnly = True
+        Me.correlativo.Width = 39
+        '
+        'cod_item
+        '
+        Me.cod_item.DataPropertyName = "cod_item"
+        Me.cod_item.HeaderText = "Codigo Item"
+        Me.cod_item.Name = "cod_item"
+        Me.cod_item.ReadOnly = True
+        '
+        'descripcion
+        '
+        Me.descripcion.DataPropertyName = "descripcion"
+        Me.descripcion.HeaderText = "Nombre"
+        Me.descripcion.Name = "descripcion"
+        Me.descripcion.ReadOnly = True
+        Me.descripcion.Width = 120
+        '
+        'tipoItem
+        '
+        Me.tipoItem.DataPropertyName = "desc_tipo_item"
+        Me.tipoItem.HeaderText = "Tipo de Item"
+        Me.tipoItem.Name = "tipoItem"
+        Me.tipoItem.ReadOnly = True
+        '
+        'precio
+        '
+        Me.precio.DataPropertyName = "precio"
+        Me.precio.HeaderText = "Precio"
+        Me.precio.Name = "precio"
+        Me.precio.ReadOnly = True
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.Location = New System.Drawing.Point(836, 197)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(136, 32)
+        Me.btnEliminar.TabIndex = 19
+        Me.btnEliminar.Text = "ELIMINAR"
+        Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'mantenimientoItemsPadre
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(984, 636)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnEliminar)
+        Me.Controls.Add(Me.dgItems)
+        Me.Controls.Add(Me.cboCerrar)
+        Me.Controls.Add(Me.btnCancelar)
+        Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "mantenimientoItemsPadre"
         Me.Text = "MANTENIMIENTO DE ITEMS PADRE"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.dgItems, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents cboItem As System.Windows.Forms.ComboBox
     Friend WithEvents cboTipoItem As System.Windows.Forms.ComboBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
+    Friend WithEvents cboItemHijo As System.Windows.Forms.ComboBox
+    Friend WithEvents cboTipoItemHijo As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents btnAgregar As System.Windows.Forms.Button
+    Friend WithEvents btnCancelar As System.Windows.Forms.Button
+    Friend WithEvents cboCerrar As System.Windows.Forms.Button
+    Friend WithEvents dgItems As System.Windows.Forms.DataGridView
+    Friend WithEvents correlativo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cod_item As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents descripcion As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents tipoItem As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents precio As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents btnEliminar As System.Windows.Forms.Button
 End Class

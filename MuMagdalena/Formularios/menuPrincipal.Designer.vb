@@ -49,6 +49,7 @@ Partial Class menuPrincipal
         Me.ConsultaCambioDeDatosHistoricoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ItemPadrToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mStripPrincipal.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -71,14 +72,14 @@ Partial Class menuPrincipal
         'IniciarSessionToolStripMenuItem
         '
         Me.IniciarSessionToolStripMenuItem.Name = "IniciarSessionToolStripMenuItem"
-        Me.IniciarSessionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.IniciarSessionToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.IniciarSessionToolStripMenuItem.Text = "Iniciar Session"
         '
         'CerrarSessionToolStripMenuItem
         '
         Me.CerrarSessionToolStripMenuItem.Enabled = False
         Me.CerrarSessionToolStripMenuItem.Name = "CerrarSessionToolStripMenuItem"
-        Me.CerrarSessionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CerrarSessionToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.CerrarSessionToolStripMenuItem.Text = "Cerrar Session"
         '
         'TransaccionesToolStripMenuItem
@@ -114,7 +115,7 @@ Partial Class menuPrincipal
         '
         'MantenimientoToolStripMenuItem
         '
-        Me.MantenimientoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuariosToolStripMenuItem, Me.ItemsToolStripMenuItem})
+        Me.MantenimientoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuariosToolStripMenuItem, Me.ItemsToolStripMenuItem, Me.ItemPadrToolStripMenuItem})
         Me.MantenimientoToolStripMenuItem.Name = "MantenimientoToolStripMenuItem"
         Me.MantenimientoToolStripMenuItem.Size = New System.Drawing.Size(106, 20)
         Me.MantenimientoToolStripMenuItem.Text = "Mantenimientos"
@@ -122,13 +123,13 @@ Partial Class menuPrincipal
         'UsuariosToolStripMenuItem
         '
         Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
-        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.UsuariosToolStripMenuItem.Text = "Usuarios"
         '
         'ItemsToolStripMenuItem
         '
         Me.ItemsToolStripMenuItem.Name = "ItemsToolStripMenuItem"
-        Me.ItemsToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.ItemsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ItemsToolStripMenuItem.Text = "Items"
         '
         'ConsulToolStripMenuItem
@@ -236,8 +237,14 @@ Partial Class menuPrincipal
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.AboutToolStripMenuItem.Text = "About"
+        '
+        'ItemPadrToolStripMenuItem
+        '
+        Me.ItemPadrToolStripMenuItem.Name = "ItemPadrToolStripMenuItem"
+        Me.ItemPadrToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ItemPadrToolStripMenuItem.Text = "Item Padre"
         '
         'menuPrincipal
         '
@@ -286,5 +293,5 @@ Partial Class menuPrincipal
     Friend WithEvents CambioDeDatosToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConsultaCambioDeDatosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConsultaCambioDeDatosHistoricoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-
+    Friend WithEvents ItemPadrToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

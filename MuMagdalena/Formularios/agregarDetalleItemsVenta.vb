@@ -27,7 +27,7 @@ Public Class agregarDetalleItemsVenta
         For Each row As DataGridViewRow In dgItems.Rows
 
             If Not row.IsNewRow Then
-                If row.Cells(3).Value = "" And row.Cells(4).Value = "" Then
+                If row.Cells(3).Value = "" Or row.Cells(4).Value = "" Then
                     MessageBox.Show("Por favor ingresar todos los datos", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Return
                 End If
@@ -35,9 +35,9 @@ Public Class agregarDetalleItemsVenta
                 Dim detalle As BeanDetalleMixto = New BeanDetalleMixto
                 detalle.cod_item = row.Cells(1).Value
                 detalle.descripcion = row.Cells(2).Value
-                detalle.precioventa = row.Cells(3).Value
+                detalle.precioventa = row.Cells(4).Value
                 detalle.cantidad = 1
-                detalle.serie = row.Cells(4).Value
+                detalle.serie = row.Cells(3).Value
                 detalle.nivel = 15
 
                 lstDetalle.Add(detalle)

@@ -75,9 +75,13 @@ Partial Class ventaentrefechas
         '
         'dgVentas
         '
+        Me.dgVentas.AllowUserToAddRows = False
+        Me.dgVentas.AllowUserToDeleteRows = False
+        Me.dgVentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgVentas.Location = New System.Drawing.Point(12, 84)
         Me.dgVentas.Name = "dgVentas"
+        Me.dgVentas.ReadOnly = True
         Me.dgVentas.Size = New System.Drawing.Size(766, 500)
         Me.dgVentas.TabIndex = 5
         '

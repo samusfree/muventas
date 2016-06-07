@@ -19,13 +19,13 @@ Partial Class ventaxID
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.txtLogin = New System.Windows.Forms.TextBox
-        Me.btnConsultar = New System.Windows.Forms.Button
-        Me.btnLimpiar = New System.Windows.Forms.Button
-        Me.dgVentas = New System.Windows.Forms.DataGridView
-        Me.btnSerie = New System.Windows.Forms.Button
-        Me.btnVentasMTCN = New System.Windows.Forms.Button
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtLogin = New System.Windows.Forms.TextBox()
+        Me.btnConsultar = New System.Windows.Forms.Button()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.dgVentas = New System.Windows.Forms.DataGridView()
+        Me.btnSerie = New System.Windows.Forms.Button()
+        Me.btnVentasMTCN = New System.Windows.Forms.Button()
         CType(Me.dgVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -65,6 +65,9 @@ Partial Class ventaxID
         '
         'dgVentas
         '
+        Me.dgVentas.AllowUserToAddRows = False
+        Me.dgVentas.AllowUserToDeleteRows = False
+        Me.dgVentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgVentas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.dgVentas.Location = New System.Drawing.Point(12, 55)
@@ -95,7 +98,7 @@ Partial Class ventaxID
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(772, 613)
+        Me.ClientSize = New System.Drawing.Size(764, 601)
         Me.Controls.Add(Me.btnVentasMTCN)
         Me.Controls.Add(Me.btnSerie)
         Me.Controls.Add(Me.dgVentas)

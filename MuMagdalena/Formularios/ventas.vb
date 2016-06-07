@@ -8,6 +8,7 @@ Public Class ventas
     Dim WithEvents usuario As New ClaseUsuario
     Dim WithEvents item As New claseItem
     Dim WithEvents venta As New ClaseVenta
+    Dim temporal As New VentaTempUtil
 
     Private Sub ventas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         MdiParent = menuPrincipal
@@ -82,10 +83,10 @@ Public Class ventas
                 detalle.serie = txtSerie.Text.Trim
                 detalle.nivel = cboNivel.SelectedItem
                 limpiardatosdetalle()
-                venta.agregar(detalle)
-                dgDetalle.DataSource = venta.registro
+                temporal.agregar(detalle)
+                dgDetalle.DataSource = temporal.registro
                 'sumar la columna monto, es decir totoalixar
-                txtTotalPagado.Text = venta.registro.Compute("Sum(precio)", "")
+                txtTotalPagado.Text = temporal.registro.Compute("Sum(precio)", "")
             Catch ex As Exception
                 MessageBox.Show(ex.Message, "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
@@ -103,11 +104,11 @@ Public Class ventas
     Private Sub btnQuitar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnQuitar.Click
         Try 'si hay registros totaliza
             'quiitar un productop
-            venta.quitar(dgDetalle.CurrentRow.Index)
+            temporal.quitar(dgDetalle.CurrentRow.Index)
             'volver a listasr
-            dgDetalle.DataSource = venta.registro
-            txtTotalPagado.Text = _
-            venta.registro.Compute("Sum(precio)", "")
+            dgDetalle.DataSource = temporal.registro
+            txtTotalPagado.Text =
+            temporal.registro.Compute("Sum(precio)", "")
         Catch ex As Exception ' si no hay o erro 
 
         End Try
@@ -123,6 +124,7 @@ Public Class ventas
         txtIDJugador.Focus()
         txtIDJugador.Enabled = True
         txtMTCN.Text = ""
+        dgDetalle.DataSource = temporal.registro
     End Sub
 
     Private Sub btnLimpiar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLimpiar.Click
@@ -130,18 +132,19 @@ Public Class ventas
     End Sub
 
     Public Sub btnLimpiarDetalle_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLimpiarDetalle.Click
-        venta.limpiar()
+        temporal = New VentaTempUtil
+        dgDetalle.DataSource = temporal.registro
     End Sub
     Sub limpiardatosdetalle()
         cboItem.SelectedIndex = 0
         cboTipoItem.SelectedIndex = 0
         txtPrecioVenta.Text = ""
-        cboNivel.SelectedIndex = 0
+        cboNivel.SelectedIndex = 1
         txtSerie.Focus()
     End Sub
 
     Private Sub btnGuardarVenta_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardarVenta.Click
-        If txtIDJugador.Text <> "" AndAlso venta.registro.Rows.Count > 0 Then
+        If txtIDJugador.Text <> "" AndAlso temporal.registro.Rows.Count > 0 Then
             Dim bean As New BeanVenta
             bean.cod_usuario = txtVendedor.Text()
             bean.fecha_venta = fechaVenta.Text
@@ -156,11 +159,11 @@ Public Class ventas
                 bean.fechadeposito = fechaDeposito.Text
                 bean.mtcn = txtMTCN.Text
             End If
-            venta.grabar(bean)
+            venta.grabar(bean, temporal.registro)
             limpiardatosdetalle()
             txtSerie.Text = ""
+            temporal = New VentaTempUtil
             limpiar()
-            venta.limpiar()
         Else
             MessageBox.Show("Falta Llenar Datos o no se agregó Items",
             "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -168,7 +171,7 @@ Public Class ventas
     End Sub
 
     Private Sub cboTipoItem_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboTipoItem.SelectedIndexChanged
-        Dim dtItems As DataTable = parametros.listado(AppConstants.ParametroTipoItem, cboTipoItem.SelectedValue)
+        Dim dtItems As DataTable = parametros.listado(AppConstants.ParametroItem, cboTipoItem.SelectedValue)
         Dim rowItems As DataRow = dtItems.NewRow
         rowItems("descripcion") = "Seleccione un Item"
         rowItems("codigo") = "0"
@@ -201,12 +204,12 @@ Public Class ventas
     Public Sub agregarItems(ByVal lista As List(Of BeanDetalleMixto))
         Try
             For Each detalle As BeanDetalleMixto In lista
-                venta.agregar(detalle)
+                temporal.agregar(detalle)
             Next
 
-            dgDetalle.DataSource = venta.registro
+            dgDetalle.DataSource = temporal.registro
             'sumar la columna monto, es decir totoalixar
-            txtTotalPagado.Text = venta.registro.Compute("Sum(precio)", "")
+            txtTotalPagado.Text = temporal.registro.Compute("Sum(precio)", "")
             limpiardatosdetalle()
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)

@@ -9,7 +9,7 @@ Public Class ParametroDAOImpl
 
     Public Function listado(ByVal parametro As Integer, ByVal tipo As Integer) As DataTable Implements ParametroDAO.listado
         Try
-            Dim da As New SqlDataAdapter("obtenerParametros", cn.getConexion)
+            Dim da As New SqlDataAdapter("SP_PARAMETROS_OBTENER", cn.getConexion)
             da.SelectCommand.CommandType = CommandType.StoredProcedure
             da.SelectCommand.Parameters.Add("@parametro", SqlDbType.Int).Value = parametro
             da.SelectCommand.Parameters.Add("@tipo", SqlDbType.Int).Value = tipo

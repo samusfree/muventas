@@ -18,7 +18,7 @@ Public Class mantenimientoItems
         Me.WindowState = 2
     End Sub
     Sub actualizar()
-        dgItems.DataSource = parametros.listado(AppConstants.ParametroItem, cboTipoItem.SelectedValue)
+        dgItems.DataSource = item.listarporTipoItem(cboTipoItem.SelectedValue)
     End Sub
 
     Sub limpiar()
@@ -85,6 +85,6 @@ Public Class mantenimientoItems
     End Sub
 
     Private Sub cboTipoItem_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        dgItems.DataSource = item.listarporTipoItem(cboTipoItem.SelectedValue )
+        actualizar()
     End Sub
 End Class

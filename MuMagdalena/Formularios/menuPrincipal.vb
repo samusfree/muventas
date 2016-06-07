@@ -130,4 +130,8 @@ Public Class menuPrincipal
     Private Sub ConsultaCambioDeDatosHistoricoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConsultaCambioDeDatosHistoricoToolStripMenuItem.Click
         consultaCambioDatosHistorico.Show()
     End Sub
+
+    Private Sub ItemPadrToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ItemPadrToolStripMenuItem.Click
+        mantenimientoItemsPadre.Show()
+    End Sub
 End Class

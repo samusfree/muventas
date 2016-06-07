@@ -27,8 +27,8 @@ Partial Class agregarDetalleItemsVenta
         Me.correlativo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cod_item = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.serie = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgItems, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -37,7 +37,7 @@ Partial Class agregarDetalleItemsVenta
         Me.dgItems.AllowUserToAddRows = False
         Me.dgItems.AllowUserToDeleteRows = False
         Me.dgItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgItems.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.correlativo, Me.cod_item, Me.descripcion, Me.precio, Me.serie})
+        Me.dgItems.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.correlativo, Me.cod_item, Me.descripcion, Me.serie, Me.precio})
         Me.dgItems.Location = New System.Drawing.Point(12, 12)
         Me.dgItems.Name = "dgItems"
         Me.dgItems.Size = New System.Drawing.Size(676, 467)
@@ -72,15 +72,17 @@ Partial Class agregarDetalleItemsVenta
         Me.descripcion.Name = "descripcion"
         Me.descripcion.Width = 120
         '
+        'serie
+        '
+        Me.serie.FillWeight = 200.0!
+        Me.serie.HeaderText = "Serie"
+        Me.serie.Name = "serie"
+        Me.serie.Width = 200
+        '
         'precio
         '
         Me.precio.HeaderText = "Precio"
         Me.precio.Name = "precio"
-        '
-        'serie
-        '
-        Me.serie.HeaderText = "Serie"
-        Me.serie.Name = "serie"
         '
         'agregarDetalleItemsVenta
         '
@@ -101,6 +103,6 @@ Partial Class agregarDetalleItemsVenta
     Friend WithEvents correlativo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cod_item As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents descripcion As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents precio As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents serie As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents precio As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

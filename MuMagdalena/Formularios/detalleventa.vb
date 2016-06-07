@@ -25,7 +25,7 @@ Public Class detalleventa
             txtCantidad.Text = bean.cantidad
             txtEstado.Text = bean.estado
             txtFechaVenta.Text = bean.fecha_venta
-            cboItem.DataSource = parametros.listado(AppConstants.ParametroTipoItem, CboTipoItem.SelectedValue)
+            cboItem.DataSource = parametros.listado(AppConstants.ParametroItem, CboTipoItem.SelectedValue)
             cboItem.DisplayMember = "descripcion"
             cboItem.ValueMember = "codigo"
             cboItem.SelectedValue = bean.cod_item
