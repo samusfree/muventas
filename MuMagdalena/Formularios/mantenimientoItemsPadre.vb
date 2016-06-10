@@ -3,7 +3,7 @@ Imports System.Windows.Forms
 
 Public Class mantenimientoItemsPadre
     Dim parametros As New ParametroDAOImpl
-    Dim WithEvents item As New claseItem
+    'Dim WithEvents item As New claseItem
     Dim WithEvents itemDao As New ItemDAOImpl
 
     Private Sub mantenimientoItemsPadre_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -48,7 +48,7 @@ Public Class mantenimientoItemsPadre
     Private Sub limpiar()
 
         cboTipoItemHijo.SelectedIndex = 0
-        dgItems.DataSource = item.devolverListaItemsHijosDataTable(cboItem.SelectedValue)
+        dgItems.DataSource = itemDao.devolverListaItemsHijos(cboItem.SelectedValue)
         If dgItems.RowCount > 0 Then
             btnEliminar.Show()
         Else
@@ -108,10 +108,6 @@ Public Class mantenimientoItemsPadre
         MessageBox.Show(mensaje, "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     End Sub
 
-    Private Sub item_mensaje(mensaje As String) Handles item.mensaje
-        MessageBox.Show(mensaje, "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-    End Sub
-
     Private Sub cboCerrar_Click(sender As Object, e As EventArgs) Handles cboCerrar.Click
         Me.Dispose()
     End Sub
@@ -125,10 +121,10 @@ Public Class mantenimientoItemsPadre
         If dgItems.SelectedRows.Count > 0 Then
             Dim lista As New List(Of Integer)
             For Each row As DataGridViewRow In dgItems.SelectedRows
-                lista.Add(row.Cells(1).Value)
+                lista.Add(row.Cells(0).Value)
             Next
 
-            If itemDao.eliminarItemHijos(cboItem.SelectedValue, lista) > 0 Then
+            If itemDao.eliminarItemHijos(lista) > 0 Then
                 MessageBox.Show("Se eliminó los items hijos seleccionados", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Else
                 MessageBox.Show("Error al eliminar los items hijos", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)

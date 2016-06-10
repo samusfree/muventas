@@ -43,7 +43,6 @@ Public Class ClaseVenta
                 End With
                 cmd.ExecuteNonQuery()
             Next
-            'grabar en la tabla tb_proformasdeta
             tr.Commit()
             RaiseEvent confirmacion("Venta Realizada")
         Catch ex As Exception
@@ -94,11 +93,11 @@ Public Class ClaseVenta
         'abrir conexion
         cn.getConexion.Open()
         'definir la transacion
-        Dim tr As SqlTransaction = _
+        Dim tr As SqlTransaction =
         cn.getConexion.BeginTransaction(IsolationLevel.Serializable)
         Try
             'grabaar en la tabla tb_proformas
-            Dim cmd As New SqlCommand( _
+            Dim cmd As New SqlCommand(
             "modificarventa", cn.getConexion, tr)
             cmd.CommandType = CommandType.StoredProcedure
             With cmd.Parameters
@@ -127,99 +126,6 @@ Public Class ClaseVenta
             cn.getConexion.Close()
         End Try
     End Sub
-
-    'es para listar los items vendidos en las ventas x id del jugador
-    Public Function ventasxid(ByVal id_jugar As String) As DataTable
-        Try
-            Dim da As New SqlDataAdapter("listaitemvendidosxId", cn.getConexion)
-            da.SelectCommand.CommandType = CommandType.StoredProcedure
-            da.SelectCommand.Parameters.Add("@id_jugador",
-            SqlDbType.VarChar).Value = id_jugar
-            Dim tabla As New DataTable
-            da.Fill(tabla)
-            Return tabla
-        Catch ex As Exception
-            RaiseEvent mensaje(ex.Message)
-        End Try
-        Return Nothing
-    End Function
-
-    Public Function ventasxserie(ByVal serie As String) As DataTable
-        Try
-            Dim da As New SqlDataAdapter("listaitemvendidosxSerie", cn.getConexion)
-            da.SelectCommand.CommandType = CommandType.StoredProcedure
-            da.SelectCommand.Parameters.Add("@serie",
-            SqlDbType.VarChar).Value = serie
-            Dim tabla As New DataTable
-            da.Fill(tabla)
-            Return tabla
-        Catch ex As Exception
-            RaiseEvent mensaje(ex.Message)
-        End Try
-        Return Nothing
-    End Function
-
-    Public Function ventasxseriehistorico(ByVal serie As String) As DataTable
-        Try
-            Dim da As New SqlDataAdapter("listaitemvendidosxSeriehistorico", cn.getConexion)
-            da.SelectCommand.CommandType = CommandType.StoredProcedure
-            da.SelectCommand.Parameters.Add("@serie",
-            SqlDbType.VarChar).Value = serie
-            Dim tabla As New DataTable
-            da.Fill(tabla)
-            Return tabla
-        Catch ex As Exception
-            RaiseEvent mensaje(ex.Message)
-        End Try
-        Return Nothing
-    End Function
-
-    'es para listar los items vendidos en las ventas x id del jugador
-    Public Function ventasxmtcn(ByVal mtcn As String) As DataTable
-        Try
-            Dim da As New SqlDataAdapter("ventasxmtcn", cn.getConexion)
-            da.SelectCommand.CommandType = CommandType.StoredProcedure
-            da.SelectCommand.Parameters.Add("@mtcn",
-            SqlDbType.VarChar).Value = mtcn
-            Dim tabla As New DataTable
-            da.Fill(tabla)
-            Return tabla
-        Catch ex As Exception
-            RaiseEvent mensaje(ex.Message)
-        End Try
-        Return Nothing
-    End Function
-
-    Public Function ventasxmtcnHistorico(ByVal mtcn As String) As DataTable
-        Try
-            Dim da As New SqlDataAdapter("ventasxmtcnHistorico", cn.getConexion)
-            da.SelectCommand.CommandType = CommandType.StoredProcedure
-            da.SelectCommand.Parameters.Add("@mtcn",
-            SqlDbType.VarChar).Value = mtcn
-            Dim tabla As New DataTable
-            da.Fill(tabla)
-            Return tabla
-        Catch ex As Exception
-            RaiseEvent mensaje(ex.Message)
-        End Try
-        Return Nothing
-    End Function
-
-
-    Public Function ventasxidhistorico(ByVal id_jugar As String) As DataTable
-        Try
-            Dim da As New SqlDataAdapter("listaitemvendidosxIdhistorico", cn.getConexion)
-            da.SelectCommand.CommandType = CommandType.StoredProcedure
-            da.SelectCommand.Parameters.Add("@id_jugador",
-            SqlDbType.VarChar).Value = id_jugar
-            Dim tabla As New DataTable
-            da.Fill(tabla)
-            Return tabla
-        Catch ex As Exception
-            RaiseEvent mensaje(ex.Message)
-        End Try
-        Return Nothing
-    End Function
 
     'procedimiento para obtener el precio del item que se definio en la BD
     Public Function obteneritemxventa(ByVal cod_venta As Integer, ByVal cod_item As Integer,
@@ -301,60 +207,6 @@ ByVal serie As String) As BeanVentaCompleto
             RaiseEvent mensaje(ex.Message)
         Finally
             cn.getConexion.Close()
-        End Try
-        Return Nothing
-    End Function
-
-    Public Function ventasentrefechas(ByVal fecha1 As String,
-    ByVal fecha2 As String) As DataTable
-        Try
-            Dim da As New SqlDataAdapter("ventasxfechas", cn.getConexion)
-            da.SelectCommand.CommandType = CommandType.StoredProcedure
-            With da.SelectCommand.Parameters
-                .Add("@fecha1", SqlDbType.SmallDateTime).Value = fecha1
-                .Add("@fecha2", SqlDbType.SmallDateTime).Value = fecha2
-            End With
-            Dim tabla As New DataTable
-            da.Fill(tabla)
-            Return tabla
-        Catch ex As Exception
-            RaiseEvent mensaje(ex.Message)
-        End Try
-        Return Nothing
-    End Function
-
-    Public Function ventasentrefechasnormales(ByVal fecha1 As String, _
-    ByVal fecha2 As String) As DataTable
-        Try
-            Dim da As New SqlDataAdapter("ventasxfechasnormales", cn.getConexion)
-            da.SelectCommand.CommandType = CommandType.StoredProcedure
-            With da.SelectCommand.Parameters
-                .Add("@fecha1", SqlDbType.SmallDateTime).Value = fecha1
-                .Add("@fecha2", SqlDbType.SmallDateTime).Value = fecha2
-            End With
-            Dim tabla As New DataTable
-            da.Fill(tabla)
-            Return tabla
-        Catch ex As Exception
-            RaiseEvent mensaje(ex.Message)
-        End Try
-        Return Nothing
-    End Function
-
-    Public Function ventasxfechasnormalesycambio(ByVal fecha1 As String,
-ByVal fecha2 As String) As DataTable
-        Try
-            Dim da As New SqlDataAdapter("ventasxfechasnormalesycambio", cn.getConexion)
-            da.SelectCommand.CommandType = CommandType.StoredProcedure
-            With da.SelectCommand.Parameters
-                .Add("@fecha1", SqlDbType.SmallDateTime).Value = fecha1
-                .Add("@fecha2", SqlDbType.SmallDateTime).Value = fecha2
-            End With
-            Dim tabla As New DataTable
-            da.Fill(tabla)
-            Return tabla
-        Catch ex As Exception
-            RaiseEvent mensaje(ex.Message)
         End Try
         Return Nothing
     End Function

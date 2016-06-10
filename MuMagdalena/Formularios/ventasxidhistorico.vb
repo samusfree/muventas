@@ -1,13 +1,16 @@
 Imports System.Windows.Forms
 
 Public Class ventasxidhistorico
-    Dim WithEvents venta As New claseVenta
+    Dim WithEvents venta As New ClaseVenta
+    Dim WithEvents ventaDAO As New VentaDAOImpl
     Private Sub ventasxidhistorico_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.MdiParent = menuPrincipal
         Me.WindowState = 2
     End Sub
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConsultar.Click
-        dgVentas.DataSource = venta.ventasxidhistorico(txtLogin.Text.Trim)
+        If txtLogin.Text.Trim <> "" Then
+            dgVentas.DataSource = ventaDAO.listarVentasPorFiltros(txtLogin.Text.Trim, Nothing, Nothing, Nothing, Nothing, 3)
+        End If
     End Sub
 
     Private Sub venta_confirmacion(ByVal contenido As String) Handles venta.confirmacion
@@ -38,18 +41,20 @@ Public Class ventasxidhistorico
         dgVentas.DataSource = Nothing
     End Sub
 
-    Private Sub dgVentas_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgVentas.CellContentClick
-
-    End Sub
-
     Private Sub btnserie_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnserie.Click
-        dgVentas.DataSource = venta.ventasxseriehistorico(txtLogin.Text.Trim)
+        If txtLogin.Text.Trim <> "" Then
+            dgVentas.DataSource = ventaDAO.listarVentasPorFiltros(Nothing, Nothing, txtLogin.Text.Trim, Nothing, Nothing, 3)
+        End If
     End Sub
 
     Private Sub btnMTCN_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMTCN.Click
         If txtLogin.Text.Trim <> "" Then
-            dgVentas.DataSource = venta.ventasxmtcnHistorico(txtLogin.Text)
+            dgVentas.DataSource = ventaDAO.listarVentasPorFiltros(Nothing, txtLogin.Text.Trim, Nothing, Nothing, Nothing, 3)
         End If
 
+    End Sub
+
+    Private Sub ventaDAO_mensaje(mensaje As String) Handles ventaDAO.mensaje
+        MessageBox.Show(mensaje, "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     End Sub
 End Class

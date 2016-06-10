@@ -23,20 +23,35 @@ Public Class ItemDAOImpl
         End Try
     End Sub
 
-    Public Function eliminarItemHijos(idItemPadre As Integer, idsItemHijos As List(Of Integer)) As Integer Implements ItemDAO.eliminarItemHijos
+    Public Function devolverListaItemsHijos(cod_item As Integer) As DataTable Implements ItemDAO.devolverListaItemsHijos
+        Try
+            Dim da As New SqlDataAdapter("SP_ITEM_OBTENER_HIJOS", cn.getConexion)
+            da.SelectCommand.CommandType = CommandType.StoredProcedure
+            da.SelectCommand.Parameters.Add("@codItem", SqlDbType.Int).Value = cod_item
+            cn.getConexion.Open()
+            Dim tabla As New DataTable
+            da.Fill(tabla)
+            Return tabla
+        Catch ex As Exception
+            RaiseEvent mensaje(ex.Message)
+        Finally
+            cn.getConexion.Close()
+        End Try
+        Return Nothing
+    End Function
+
+    Public Function eliminarItemHijos(ids As List(Of Integer)) As Integer Implements ItemDAO.eliminarItemHijos
         cn.getConexion.Open()
         Dim tr As SqlTransaction =
         cn.getConexion.BeginTransaction(IsolationLevel.Serializable)
         Dim cmd As SqlCommand
         Try
-            For Each idItemHijo As Integer In idsItemHijos
+            For Each id As Integer In ids
                 cmd = New SqlCommand("SP_ITEM_HIJO_ELIMINAR", cn.getConexion, tr)
                 cmd.CommandType = CommandType.StoredProcedure
                 With cmd.Parameters
-                    .Add("@itempadre", SqlDbType.Int).Value = idItemPadre
-                    .Add("@itemhijo", SqlDbType.VarChar).Value = idItemHijo
+                    .Add("@id", SqlDbType.Int).Value = id
                 End With
-
                 cmd.ExecuteNonQuery()
             Next
 

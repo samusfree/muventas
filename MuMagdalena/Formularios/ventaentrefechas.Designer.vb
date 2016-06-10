@@ -34,9 +34,9 @@ Partial Class ventaentrefechas
         '
         'btnConsultar
         '
-        Me.btnConsultar.Location = New System.Drawing.Point(297, 4)
+        Me.btnConsultar.Location = New System.Drawing.Point(296, 16)
         Me.btnConsultar.Name = "btnConsultar"
-        Me.btnConsultar.Size = New System.Drawing.Size(117, 23)
+        Me.btnConsultar.Size = New System.Drawing.Size(136, 43)
         Me.btnConsultar.TabIndex = 0
         Me.btnConsultar.Text = "Consultar Normales"
         Me.btnConsultar.UseVisualStyleBackColor = True
@@ -82,13 +82,13 @@ Partial Class ventaentrefechas
         Me.dgVentas.Location = New System.Drawing.Point(12, 84)
         Me.dgVentas.Name = "dgVentas"
         Me.dgVentas.ReadOnly = True
-        Me.dgVentas.Size = New System.Drawing.Size(766, 500)
+        Me.dgVentas.Size = New System.Drawing.Size(960, 540)
         Me.dgVentas.TabIndex = 5
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(551, 56)
+        Me.Label3.Location = New System.Drawing.Point(758, 61)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(94, 13)
         Me.Label3.TabIndex = 6
@@ -96,7 +96,7 @@ Partial Class ventaentrefechas
         '
         'txtTotalVendido
         '
-        Me.txtTotalVendido.Location = New System.Drawing.Point(669, 53)
+        Me.txtTotalVendido.Location = New System.Drawing.Point(872, 58)
         Me.txtTotalVendido.Name = "txtTotalVendido"
         Me.txtTotalVendido.ReadOnly = True
         Me.txtTotalVendido.Size = New System.Drawing.Size(100, 20)
@@ -105,18 +105,18 @@ Partial Class ventaentrefechas
         '
         'btnNorCam
         '
-        Me.btnNorCam.Location = New System.Drawing.Point(420, 4)
+        Me.btnNorCam.Location = New System.Drawing.Point(438, 16)
         Me.btnNorCam.Name = "btnNorCam"
-        Me.btnNorCam.Size = New System.Drawing.Size(153, 23)
+        Me.btnNorCam.Size = New System.Drawing.Size(153, 43)
         Me.btnNorCam.TabIndex = 8
         Me.btnNorCam.Text = "Consultar Normales/Cambio"
         Me.btnNorCam.UseVisualStyleBackColor = True
         '
         'btnhisto
         '
-        Me.btnhisto.Location = New System.Drawing.Point(579, 4)
+        Me.btnhisto.Location = New System.Drawing.Point(597, 16)
         Me.btnhisto.Name = "btnhisto"
-        Me.btnhisto.Size = New System.Drawing.Size(127, 23)
+        Me.btnhisto.Size = New System.Drawing.Size(127, 42)
         Me.btnhisto.TabIndex = 9
         Me.btnhisto.Text = "Consultar Historico"
         Me.btnhisto.UseVisualStyleBackColor = True
@@ -125,7 +125,7 @@ Partial Class ventaentrefechas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(788, 593)
+        Me.ClientSize = New System.Drawing.Size(984, 636)
         Me.Controls.Add(Me.btnhisto)
         Me.Controls.Add(Me.btnNorCam)
         Me.Controls.Add(Me.txtTotalVendido)

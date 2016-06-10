@@ -6,7 +6,7 @@ Imports System.Data
 Public Class ventas
     Dim parametros As New ParametroDAOImpl
     Dim WithEvents usuario As New ClaseUsuario
-    Dim WithEvents item As New claseItem
+    Dim WithEvents itemDAO As ItemDAO = New ItemDAOImpl
     Dim WithEvents venta As New ClaseVenta
     Dim temporal As New VentaTempUtil
 
@@ -47,7 +47,7 @@ Public Class ventas
         limpiar()
         Me.WindowState = 2
         AddHandler cboTipoItem.SelectedIndexChanged, AddressOf cboTipoItem_SelectedIndexChanged
-        ''limpiardatosdetalle()
+
     End Sub
 
 
@@ -63,10 +63,6 @@ Public Class ventas
 
 
     Private Sub usuario_mensaje(ByVal mensaje As String) Handles usuario.mensaje
-        MessageBox.Show(mensaje, "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-    End Sub
-
-    Private Sub item_mensaje(ByVal mensaje As String) Handles item.mensaje
         MessageBox.Show(mensaje, "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     End Sub
 
@@ -187,8 +183,8 @@ Public Class ventas
     Private Sub cboItem_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboItem.SelectedIndexChanged
 
         Try
-            Dim lstItems As List(Of BeanItems) = item.devolverListaItemsHijos(cboItem.SelectedValue)
-            If lstItems.Count > 0 Then
+            Dim data As DataTable = itemDAO.devolverListaItemsHijos(cboItem.SelectedValue)
+            If data IsNot Nothing And data.Rows.Count > 0 Then
                 Dim detalle As New agregarDetalleItemsVenta
                 detalle.definirParametros(cboItem.SelectedValue)
                 detalle.setVenta(Me)
@@ -214,5 +210,9 @@ Public Class ventas
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub itemDAO_mensaje(mensaje As String) Handles itemDAO.mensaje
+        MessageBox.Show(mensaje, "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     End Sub
 End Class

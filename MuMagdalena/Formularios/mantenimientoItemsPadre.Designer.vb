@@ -36,12 +36,12 @@ Partial Class mantenimientoItemsPadre
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.cboCerrar = New System.Windows.Forms.Button()
         Me.dgItems = New System.Windows.Forms.DataGridView()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.correlativo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cod_item = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tipoItem = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgItems, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -175,6 +175,7 @@ Partial Class mantenimientoItemsPadre
         'dgItems
         '
         Me.dgItems.AllowUserToAddRows = False
+        Me.dgItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgItems.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.correlativo, Me.cod_item, Me.descripcion, Me.tipoItem, Me.precio})
         Me.dgItems.Location = New System.Drawing.Point(12, 197)
@@ -183,9 +184,18 @@ Partial Class mantenimientoItemsPadre
         Me.dgItems.Size = New System.Drawing.Size(809, 427)
         Me.dgItems.TabIndex = 18
         '
+        'btnEliminar
+        '
+        Me.btnEliminar.Location = New System.Drawing.Point(836, 197)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(136, 32)
+        Me.btnEliminar.TabIndex = 19
+        Me.btnEliminar.Text = "ELIMINAR"
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        '
         'correlativo
         '
-        Me.correlativo.DataPropertyName = "correlativo"
+        Me.correlativo.DataPropertyName = "id"
         Me.correlativo.HeaderText = "#"
         Me.correlativo.Name = "correlativo"
         Me.correlativo.ReadOnly = True
@@ -197,6 +207,7 @@ Partial Class mantenimientoItemsPadre
         Me.cod_item.HeaderText = "Codigo Item"
         Me.cod_item.Name = "cod_item"
         Me.cod_item.ReadOnly = True
+        Me.cod_item.Width = 88
         '
         'descripcion
         '
@@ -204,7 +215,7 @@ Partial Class mantenimientoItemsPadre
         Me.descripcion.HeaderText = "Nombre"
         Me.descripcion.Name = "descripcion"
         Me.descripcion.ReadOnly = True
-        Me.descripcion.Width = 120
+        Me.descripcion.Width = 69
         '
         'tipoItem
         '
@@ -212,6 +223,7 @@ Partial Class mantenimientoItemsPadre
         Me.tipoItem.HeaderText = "Tipo de Item"
         Me.tipoItem.Name = "tipoItem"
         Me.tipoItem.ReadOnly = True
+        Me.tipoItem.Width = 91
         '
         'precio
         '
@@ -219,15 +231,7 @@ Partial Class mantenimientoItemsPadre
         Me.precio.HeaderText = "Precio"
         Me.precio.Name = "precio"
         Me.precio.ReadOnly = True
-        '
-        'btnEliminar
-        '
-        Me.btnEliminar.Location = New System.Drawing.Point(836, 197)
-        Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(136, 32)
-        Me.btnEliminar.TabIndex = 19
-        Me.btnEliminar.Text = "ELIMINAR"
-        Me.btnEliminar.UseVisualStyleBackColor = True
+        Me.precio.Width = 62
         '
         'mantenimientoItemsPadre
         '
@@ -266,10 +270,10 @@ Partial Class mantenimientoItemsPadre
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents cboCerrar As System.Windows.Forms.Button
     Friend WithEvents dgItems As System.Windows.Forms.DataGridView
+    Friend WithEvents btnEliminar As System.Windows.Forms.Button
     Friend WithEvents correlativo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cod_item As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents descripcion As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents tipoItem As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents precio As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents btnEliminar As System.Windows.Forms.Button
 End Class

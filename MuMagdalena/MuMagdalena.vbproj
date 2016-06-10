@@ -95,8 +95,10 @@
     <Compile Include="Clases\ClaseVenta.vb" />
     <Compile Include="Daos\Impl\ItemDAOImpl.vb" />
     <Compile Include="Daos\Impl\ParametroDAOImpl.vb" />
+    <Compile Include="Daos\Impl\VentaDAOImpl.vb" />
     <Compile Include="Daos\ItemDAO.vb" />
     <Compile Include="Daos\ParametroDAO.vb" />
+    <Compile Include="Daos\VentaDAO.vb" />
     <Compile Include="Entidades\BeanBloqueo.vb" />
     <Compile Include="Entidades\BeanCambioDatos.vb" />
     <Compile Include="Entidades\BeanCambioNombre.vb" />

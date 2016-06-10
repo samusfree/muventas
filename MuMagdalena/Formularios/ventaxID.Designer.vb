@@ -32,7 +32,7 @@ Partial Class ventaxID
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 15)
+        Me.Label1.Location = New System.Drawing.Point(22, 18)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(126, 13)
         Me.Label1.TabIndex = 0
@@ -40,25 +40,25 @@ Partial Class ventaxID
         '
         'txtLogin
         '
-        Me.txtLogin.Location = New System.Drawing.Point(155, 15)
+        Me.txtLogin.Location = New System.Drawing.Point(180, 15)
         Me.txtLogin.Name = "txtLogin"
-        Me.txtLogin.Size = New System.Drawing.Size(133, 20)
+        Me.txtLogin.Size = New System.Drawing.Size(211, 20)
         Me.txtLogin.TabIndex = 1
         '
         'btnConsultar
         '
-        Me.btnConsultar.Location = New System.Drawing.Point(303, 13)
+        Me.btnConsultar.Location = New System.Drawing.Point(426, 5)
         Me.btnConsultar.Name = "btnConsultar"
-        Me.btnConsultar.Size = New System.Drawing.Size(111, 23)
+        Me.btnConsultar.Size = New System.Drawing.Size(127, 39)
         Me.btnConsultar.TabIndex = 2
         Me.btnConsultar.Text = "C. ID"
         Me.btnConsultar.UseVisualStyleBackColor = True
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.Location = New System.Drawing.Point(641, 12)
+        Me.btnLimpiar.Location = New System.Drawing.Point(836, 5)
         Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(105, 23)
+        Me.btnLimpiar.Size = New System.Drawing.Size(123, 39)
         Me.btnLimpiar.TabIndex = 3
         Me.btnLimpiar.Text = "LIMPIAR"
         Me.btnLimpiar.UseVisualStyleBackColor = True
@@ -73,23 +73,23 @@ Partial Class ventaxID
         Me.dgVentas.Location = New System.Drawing.Point(12, 55)
         Me.dgVentas.Name = "dgVentas"
         Me.dgVentas.ReadOnly = True
-        Me.dgVentas.Size = New System.Drawing.Size(728, 546)
+        Me.dgVentas.Size = New System.Drawing.Size(960, 569)
         Me.dgVentas.TabIndex = 4
         '
         'btnSerie
         '
-        Me.btnSerie.Location = New System.Drawing.Point(420, 12)
+        Me.btnSerie.Location = New System.Drawing.Point(569, 5)
         Me.btnSerie.Name = "btnSerie"
-        Me.btnSerie.Size = New System.Drawing.Size(116, 23)
+        Me.btnSerie.Size = New System.Drawing.Size(132, 39)
         Me.btnSerie.TabIndex = 5
         Me.btnSerie.Text = "C. SERIE"
         Me.btnSerie.UseVisualStyleBackColor = True
         '
         'btnVentasMTCN
         '
-        Me.btnVentasMTCN.Location = New System.Drawing.Point(542, 12)
+        Me.btnVentasMTCN.Location = New System.Drawing.Point(707, 5)
         Me.btnVentasMTCN.Name = "btnVentasMTCN"
-        Me.btnVentasMTCN.Size = New System.Drawing.Size(93, 23)
+        Me.btnVentasMTCN.Size = New System.Drawing.Size(123, 39)
         Me.btnVentasMTCN.TabIndex = 8
         Me.btnVentasMTCN.Text = "C. MTCN o OP"
         Me.btnVentasMTCN.UseVisualStyleBackColor = True
@@ -98,7 +98,7 @@ Partial Class ventaxID
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(764, 601)
+        Me.ClientSize = New System.Drawing.Size(984, 636)
         Me.Controls.Add(Me.btnVentasMTCN)
         Me.Controls.Add(Me.btnSerie)
         Me.Controls.Add(Me.dgVentas)
@@ -106,8 +106,8 @@ Partial Class ventaxID
         Me.Controls.Add(Me.btnConsultar)
         Me.Controls.Add(Me.txtLogin)
         Me.Controls.Add(Me.Label1)
-        Me.MaximumSize = New System.Drawing.Size(780, 640)
         Me.Name = "ventaxID"
+        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show
         Me.Text = "CONSULTA DE VENTAS  ACTUALES"
         CType(Me.dgVentas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

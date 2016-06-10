@@ -1,14 +1,17 @@
 Imports System.Windows.Forms
 
 Public Class ventaxID
-    Dim WithEvents venta As New claseVenta
+    Dim WithEvents venta As New ClaseVenta
+    Dim WithEvents ventaDAO As New VentaDAOImpl
     Private Sub consultaPorID_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.MdiParent = menuPrincipal
         Me.WindowState = 2
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConsultar.Click
-        dgVentas.DataSource = venta.ventasxid(txtLogin.Text.Trim)
+        If txtLogin.Text.Trim <> "" Then
+            dgVentas.DataSource = ventaDAO.listarVentasPorFiltros(txtLogin.Text.Trim, Nothing, Nothing, Nothing, Nothing, 1)
+            End If 
     End Sub
 
     Private Sub venta_confirmacion(ByVal contenido As String) Handles venta.confirmacion
@@ -18,6 +21,8 @@ Public Class ventaxID
     Private Sub venta_mensaje(ByVal contenido As String) Handles venta.mensaje
         MessageBox.Show(contenido, "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     End Sub
+
+
 
     Private Sub dgVentas_CellContentDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgVentas.CellContentDoubleClick
         Dim cod_venta As Integer = Nothing
@@ -40,16 +45,18 @@ Public Class ventaxID
     End Sub
 
     Private Sub btnSerie_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSerie.Click
-        dgVentas.DataSource = venta.ventasxserie(txtLogin.Text)
+        If txtLogin.Text.Trim <> "" Then
+            dgVentas.DataSource = ventaDAO.listarVentasPorFiltros(Nothing, Nothing, txtLogin.Text, Nothing, Nothing, 1)
+        End If
     End Sub
 
     Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnVentasMTCN.Click
         If txtLogin.Text.Trim <> "" Then
-            dgVentas.DataSource = venta.ventasxmtcn(txtLogin.Text.Trim)
+            dgVentas.DataSource = ventaDAO.listarVentasPorFiltros(Nothing, txtLogin.Text, Nothing, Nothing, Nothing, 1)
         End If
     End Sub
 
-    Private Sub dgVentas_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgVentas.CellContentClick
-
+    Private Sub ventaDAO_mensaje(mensaje As String) Handles ventaDAO.mensaje
+        MessageBox.Show(mensaje, "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     End Sub
 End Class

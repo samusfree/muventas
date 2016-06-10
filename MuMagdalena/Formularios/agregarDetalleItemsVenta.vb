@@ -3,7 +3,7 @@ Imports System.Windows.Forms
 
 Public Class agregarDetalleItemsVenta
     Private idItem As Integer
-    Dim WithEvents item As claseItem = New claseItem
+    Dim WithEvents itemDAO As ItemDAO = New ItemDAOImpl
     Dim ventas As ventas
 
 
@@ -13,7 +13,7 @@ Public Class agregarDetalleItemsVenta
 
     Public Sub listar()
         dgItems.AutoGenerateColumns = False
-        dgItems.DataSource = item.devolverListaItemsHijosDataTable(idItem)
+        dgItems.DataSource = itemDAO.devolverListaItemsHijos(idItem)
         dgItems.EditMode = DataGridViewEditMode.EditOnEnter
     End Sub
 
@@ -54,5 +54,9 @@ Public Class agregarDetalleItemsVenta
 
     Public Sub setVenta(ByRef ventas As ventas)
         Me.ventas = ventas
+    End Sub
+
+    Private Sub itemDAO_mensaje(mensaje As String) Handles itemDAO.mensaje
+        MessageBox.Show(mensaje, "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     End Sub
 End Class

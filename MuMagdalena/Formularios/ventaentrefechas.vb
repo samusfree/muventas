@@ -1,8 +1,10 @@
 Public Class ventaentrefechas
-    Dim WithEvents venta As New claseVenta
+    Dim WithEvents venta As New ClaseVenta
+    Dim WithEvents ventaDAO As New VentaDAOImpl
+
     Dim tipollamada As Integer = 0
     Private Sub btnConsultar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConsultar.Click
-        dgVentas.DataSource = venta.ventasentrefechasnormales(dtFecha1.Text, dtFecha2.Text)
+        dgVentas.DataSource = ventaDAO.listarVentasPorFiltros(Nothing, Nothing, Nothing, dtFecha1.Text, dtFecha2.Text, 1)
         txtTotalVendido.Text = venta.totalventaentrefechasNormal(dtFecha1.Text, dtFecha2.Text).ToString
         tipollamada = 1
     End Sub
@@ -13,13 +15,13 @@ Public Class ventaentrefechas
     End Sub
 
     Private Sub btnNorCam_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNorCam.Click
-        dgVentas.DataSource = venta.ventasxfechasnormalesycambio(dtFecha1.Text, dtFecha2.Text)
+        dgVentas.DataSource = ventaDAO.listarVentasPorFiltros(Nothing, Nothing, Nothing, dtFecha1.Text, dtFecha2.Text, 2)
         txtTotalVendido.Text = venta.totalvendientrefechas(dtFecha1.Text, dtFecha2.Text).ToString
         tipollamada = 0
     End Sub
 
     Private Sub btnhisto_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnhisto.Click
-        dgVentas.DataSource = venta.ventasentrefechas(dtFecha1.Text, dtFecha2.Text)
+        dgVentas.DataSource = ventaDAO.listarVentasPorFiltros(Nothing, Nothing, Nothing, dtFecha1.Text, dtFecha2.Text, 3)
         txtTotalVendido.Text = venta.totalvendientrefechas(dtFecha1.Text, dtFecha2.Text).ToString
         tipollamada = 0
     End Sub
@@ -42,7 +44,8 @@ Public Class ventaentrefechas
         MsgBox(contenido)
     End Sub
 
-    Private Sub dgVentas_CellContentClick(sender As Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgVentas.CellContentClick
-
+    Private Sub ventaDAO_mensaje(ByVal contenido As String) Handles ventaDAO.mensaje
+        MsgBox(contenido)
     End Sub
+
 End Class

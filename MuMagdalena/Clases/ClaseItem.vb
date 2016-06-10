@@ -67,46 +67,4 @@ Public Class claseItem
         End Try
         Return Nothing
     End Function
-
-    Public Function devolverListaItemsHijos(ByVal cod_item As Integer) As List(Of BeanItems)
-        Try
-            Dim tabla As DataTable = devolverListaItemsHijosDataTable(cod_item)
-
-            Dim list As List(Of BeanItems) = New List(Of BeanItems)
-
-            For Each r As DataRow In tabla.Rows
-                Dim bean As New BeanItems
-                bean.cod_item = r(1)
-                bean.cod_tipoitem = r(2)
-                bean.descripcion = r(3)
-                'bean.precio = r(4)
-                list.Add(bean)
-            Next
-
-            Return list
-        Catch ex As Exception
-            RaiseEvent mensaje(ex.Message)
-        Finally
-            cn.getConexion.Close()
-        End Try
-        Return Nothing
-    End Function
-
-
-    Public Function devolverListaItemsHijosDataTable(ByVal cod_item As Integer) As DataTable
-        Try
-            Dim da As New SqlDataAdapter("SP_ITEM_OBTENER_HIJOS", cn.getConexion)
-            da.SelectCommand.CommandType = CommandType.StoredProcedure
-            da.SelectCommand.Parameters.Add("@codItem", SqlDbType.Int).Value = cod_item
-            cn.getConexion.Open()
-            Dim tabla As New DataTable
-            da.Fill(tabla)
-            Return tabla
-        Catch ex As Exception
-            RaiseEvent mensaje(ex.Message)
-        Finally
-            cn.getConexion.Close()
-        End Try
-        Return Nothing
-    End Function
 End Class
