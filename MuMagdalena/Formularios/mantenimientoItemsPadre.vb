@@ -66,7 +66,12 @@ Public Class mantenimientoItemsPadre
 
         MessageBox.Show("Se agrego el item Hijo", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-        limpiar()
+        dgItems.DataSource = itemDao.devolverListaItemsHijos(cboItem.SelectedValue)
+        If dgItems.RowCount > 0 Then
+            btnEliminar.Show()
+        Else
+            btnEliminar.Hide()
+        End If
 
     End Sub
 
@@ -84,6 +89,9 @@ Public Class mantenimientoItemsPadre
             .ValueMember = "codigo"
         End With
         AddHandler cboItem.SelectedIndexChanged, AddressOf cboItem_SelectedIndexChanged
+
+        dgItems.DataSource = Nothing
+        btnEliminar.Hide()
     End Sub
 
     Private Sub cboTipoItemHijo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboTipoItemHijo.SelectedIndexChanged

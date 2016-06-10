@@ -67,7 +67,7 @@ Public Class ventas
     End Sub
 
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
-        If cboItem.Items.Count > 0 And txtPrecioVenta.Text <> "" And txtSerie.Text <> "" Then
+        If cboTipoItem.SelectedIndex > 0 And cboItem.SelectedIndex > 0 And txtPrecioVenta.Text <> "" And txtSerie.Text.Trim <> "" Then
             Try
                 Dim detalle As New BeanDetalleMixto
                 detalle.cod_item = cboItem.SelectedValue
@@ -78,7 +78,9 @@ Public Class ventas
                 detalle.cantidad = 1
                 detalle.serie = txtSerie.Text.Trim
                 detalle.nivel = cboNivel.SelectedItem
-                limpiardatosdetalle()
+                txtSerie.Text = ""
+                txtPrecioVenta.Text = ""
+                txtSerie.Focus()
                 temporal.agregar(detalle)
                 dgDetalle.DataSource = temporal.registro
                 'sumar la columna monto, es decir totoalixar
@@ -86,6 +88,8 @@ Public Class ventas
             Catch ex As Exception
                 MessageBox.Show(ex.Message, "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
+        Else
+            MessageBox.Show("Por favor ingrese todos los campos del Item a vender", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
 
@@ -136,6 +140,7 @@ Public Class ventas
         cboTipoItem.SelectedIndex = 0
         txtPrecioVenta.Text = ""
         cboNivel.SelectedIndex = 1
+        txtSerie.Text = ""
         txtSerie.Focus()
     End Sub
 
@@ -178,6 +183,7 @@ Public Class ventas
             .DisplayMember = "descripcion"
             .ValueMember = "codigo"
         End With
+
     End Sub
 
     Private Sub cboItem_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboItem.SelectedIndexChanged

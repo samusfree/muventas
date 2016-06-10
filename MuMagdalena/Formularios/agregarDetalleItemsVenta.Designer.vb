@@ -36,11 +36,12 @@ Partial Class agregarDetalleItemsVenta
         '
         Me.dgItems.AllowUserToAddRows = False
         Me.dgItems.AllowUserToDeleteRows = False
+        Me.dgItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgItems.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.correlativo, Me.cod_item, Me.descripcion, Me.serie, Me.precio})
         Me.dgItems.Location = New System.Drawing.Point(12, 12)
         Me.dgItems.Name = "dgItems"
-        Me.dgItems.Size = New System.Drawing.Size(676, 467)
+        Me.dgItems.Size = New System.Drawing.Size(764, 467)
         Me.dgItems.TabIndex = 0
         '
         'btnAceptar
@@ -54,9 +55,10 @@ Partial Class agregarDetalleItemsVenta
         '
         'correlativo
         '
-        Me.correlativo.DataPropertyName = "correlativo"
+        Me.correlativo.DataPropertyName = "id"
         Me.correlativo.HeaderText = "#"
         Me.correlativo.Name = "correlativo"
+        Me.correlativo.ReadOnly = True
         Me.correlativo.Width = 39
         '
         'cod_item
@@ -64,25 +66,29 @@ Partial Class agregarDetalleItemsVenta
         Me.cod_item.DataPropertyName = "cod_item"
         Me.cod_item.HeaderText = "Codigo Item"
         Me.cod_item.Name = "cod_item"
+        Me.cod_item.ReadOnly = True
+        Me.cod_item.Width = 88
         '
         'descripcion
         '
         Me.descripcion.DataPropertyName = "descripcion"
         Me.descripcion.HeaderText = "Nombre"
         Me.descripcion.Name = "descripcion"
-        Me.descripcion.Width = 120
+        Me.descripcion.ReadOnly = True
+        Me.descripcion.Width = 69
         '
         'serie
         '
         Me.serie.FillWeight = 200.0!
         Me.serie.HeaderText = "Serie"
         Me.serie.Name = "serie"
-        Me.serie.Width = 200
+        Me.serie.Width = 56
         '
         'precio
         '
         Me.precio.HeaderText = "Precio"
         Me.precio.Name = "precio"
+        Me.precio.Width = 62
         '
         'agregarDetalleItemsVenta
         '

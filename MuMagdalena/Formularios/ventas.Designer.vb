@@ -320,6 +320,7 @@ Partial Class ventas
         'dgDetalle
         '
         Me.dgDetalle.AllowUserToAddRows = False
+        Me.dgDetalle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgDetalle.Location = New System.Drawing.Point(12, 102)
         Me.dgDetalle.Name = "dgDetalle"
