@@ -1,5 +1,5 @@
+Imports System.Configuration
 Imports System.Data.SqlClient
-Imports System.Configuration 
 Public Class ClaseConexion
     Protected configuracion As ConnectionStringSettings = ConfigurationManager.ConnectionStrings("bdMagdalena")
     Dim cn As New SqlConnection(configuracion.ConnectionString)

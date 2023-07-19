@@ -47,5 +47,5 @@ Public Class consultacambionombre
         actualizarCambioNombre.Show()
     End Sub
 
-    
+
 End Class

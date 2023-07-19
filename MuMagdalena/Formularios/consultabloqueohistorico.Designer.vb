@@ -19,21 +19,21 @@ Partial Class consultabloqueohistorico
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.dgBloqueo = New System.Windows.Forms.DataGridView
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Button2 = New System.Windows.Forms.Button
-        Me.btnBLogin = New System.Windows.Forms.Button
-        Me.txtLogin = New System.Windows.Forms.TextBox
-        Me.Label1 = New System.Windows.Forms.Label
+        Me.dgBloqueo = New System.Windows.Forms.DataGridView()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnBLogin = New System.Windows.Forms.Button()
+        Me.txtLogin = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.dgBloqueo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgBloqueo
         '
         Me.dgBloqueo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgBloqueo.Location = New System.Drawing.Point(26, 51)
+        Me.dgBloqueo.Location = New System.Drawing.Point(12, 43)
         Me.dgBloqueo.Name = "dgBloqueo"
-        Me.dgBloqueo.Size = New System.Drawing.Size(706, 490)
+        Me.dgBloqueo.Size = New System.Drawing.Size(764, 471)
         Me.dgBloqueo.TabIndex = 11
         '
         'Button1
@@ -83,7 +83,7 @@ Partial Class consultabloqueohistorico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(765, 553)
+        Me.ClientSize = New System.Drawing.Size(980, 651)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.btnBLogin)

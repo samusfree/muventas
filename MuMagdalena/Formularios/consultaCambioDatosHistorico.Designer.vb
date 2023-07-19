@@ -70,7 +70,7 @@ Partial Class consultaCambioDatosHistorico
         Me.dgCambioDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgCambioDatos.Location = New System.Drawing.Point(12, 62)
         Me.dgCambioDatos.Name = "dgCambioDatos"
-        Me.dgCambioDatos.Size = New System.Drawing.Size(799, 360)
+        Me.dgCambioDatos.Size = New System.Drawing.Size(981, 494)
         Me.dgCambioDatos.TabIndex = 23
         '
         'btnBLogin
@@ -86,7 +86,7 @@ Partial Class consultaCambioDatosHistorico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(832, 450)
+        Me.ClientSize = New System.Drawing.Size(1005, 568)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnBusquedaMTCN)
         Me.Controls.Add(Me.btnBusquedaID)

@@ -1,5 +1,5 @@
-Imports System.Data.SqlClient
 Imports System.Data
+Imports System.Data.SqlClient
 Public Class ClaseVenta
     Dim cn As New ClaseConexion
 
@@ -12,8 +12,7 @@ Public Class ClaseVenta
         'abrir conexion
         cn.getConexion.Open()
         'definir la transacion
-        Dim tr As SqlTransaction =
-        cn.getConexion.BeginTransaction(IsolationLevel.Serializable)
+        Dim tr As SqlTransaction = cn.getConexion.BeginTransaction(IsolationLevel.Serializable)
         Try
             'grabaar en la tabla tb_proformas
             For Each reg As DataRow In detalle.Rows
@@ -53,19 +52,42 @@ Public Class ClaseVenta
         End Try
     End Sub
 
-    Public Sub cambiarventa(ByVal cod_venta As Integer, ByVal cod_item As Integer, ByVal serie As String)
+    Public Sub cambiarventa(cod_venta As Integer)
         Try
             Dim cmd As New SqlCommand("cambioitemoset", cn.getConexion)
             cmd.CommandType = CommandType.StoredProcedure
             With cmd.Parameters
                 .Add("@cod_venta", SqlDbType.Int).Value = cod_venta
-                .Add("@cod_item", SqlDbType.Int).Value = cod_item
-                .Add("@serie", SqlDbType.VarChar).Value = serie
             End With
             cn.getConexion.Open()
             cmd.ExecuteNonQuery()
         Catch ex As Exception
             RaiseEvent mensaje(ex.Message)
+        Finally
+            cn.getConexion.Close()
+        End Try
+    End Sub
+
+    Public Sub cambiarventaMasiva(codigos As List(Of Integer))
+        'abrir conexion
+        cn.getConexion.Open()
+        'definir la transacion
+        Dim tr As SqlTransaction =
+        cn.getConexion.BeginTransaction(IsolationLevel.Serializable)
+        Try
+            For Each codigo As Integer In codigos
+                Dim cmd As New SqlCommand("cambioitemoset", cn.getConexion, tr)
+                cmd.CommandType = CommandType.StoredProcedure
+                With cmd.Parameters
+                    .Add("@cod_venta", SqlDbType.Int).Value = codigo
+                End With
+                cmd.ExecuteNonQuery()
+            Next
+            tr.Commit()
+            RaiseEvent confirmacion("Cambio realizado")
+        Catch ex As Exception
+            RaiseEvent mensaje(ex.Message)
+            tr.Rollback()
         Finally
             cn.getConexion.Close()
         End Try
@@ -211,7 +233,7 @@ ByVal serie As String) As BeanVentaCompleto
         Return Nothing
     End Function
 
-    Public Function totalvendientrefechas(ByVal fecha1 As String, _
+    Public Function totalvendientrefechas(ByVal fecha1 As String,
     ByVal fecha2 As String) As Double
         Try
             Dim cmd As New SqlCommand("totalventaentrefechas", cn.getConexion)
@@ -234,7 +256,7 @@ ByVal serie As String) As BeanVentaCompleto
         Return Nothing
     End Function
 
-    Public Function totalventaentrefechasNormal(ByVal fecha1 As String, _
+    Public Function totalventaentrefechasNormal(ByVal fecha1 As String,
     ByVal fecha2 As String) As Double
         Try
             Dim cmd As New SqlCommand("totalventaentrefechasNormal", cn.getConexion)

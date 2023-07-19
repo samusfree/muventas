@@ -21,7 +21,7 @@ Public Class ClaseCambioDatos
             da.SelectCommand.Parameters.Add("@pagado", SqlDbType.Float).Value = bean.pagado
             da.SelectCommand.Parameters.Add("@modalidad", SqlDbType.VarChar).Value = bean.modalidad
             da.SelectCommand.Parameters.Add("@observacion", SqlDbType.VarChar).Value = bean.observacion
-           
+
             If bean.modalidad <> "EFECTIVO" Then
                 da.SelectCommand.Parameters.Add("@fecha_deposito", SqlDbType.SmallDateTime).Value = bean.fecha_deposito
                 da.SelectCommand.Parameters.Add("@mtcn", SqlDbType.VarChar).Value = bean.mtcn

@@ -36,10 +36,10 @@ Partial Class ventasxidhistorico
         Me.dgVentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgVentas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
-        Me.dgVentas.Location = New System.Drawing.Point(11, 57)
+        Me.dgVentas.Location = New System.Drawing.Point(28, 110)
         Me.dgVentas.Name = "dgVentas"
         Me.dgVentas.ReadOnly = True
-        Me.dgVentas.Size = New System.Drawing.Size(961, 567)
+        Me.dgVentas.Size = New System.Drawing.Size(1224, 609)
         Me.dgVentas.TabIndex = 9
         '
         'btnLimpiar
@@ -98,7 +98,7 @@ Partial Class ventasxidhistorico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(984, 636)
+        Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.Controls.Add(Me.btnMTCN)
         Me.Controls.Add(Me.btnserie)
         Me.Controls.Add(Me.dgVentas)

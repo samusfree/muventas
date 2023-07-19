@@ -19,13 +19,13 @@ Partial Class consultacambionombre
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.txtCriterio = New System.Windows.Forms.TextBox
-        Me.btnNAnt = New System.Windows.Forms.Button
-        Me.btnNAct = New System.Windows.Forms.Button
-        Me.btnIAct = New System.Windows.Forms.Button
-        Me.btnIDAnt = New System.Windows.Forms.Button
-        Me.dgResultado = New System.Windows.Forms.DataGridView
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtCriterio = New System.Windows.Forms.TextBox()
+        Me.btnNAnt = New System.Windows.Forms.Button()
+        Me.btnNAct = New System.Windows.Forms.Button()
+        Me.btnIAct = New System.Windows.Forms.Button()
+        Me.btnIDAnt = New System.Windows.Forms.Button()
+        Me.dgResultado = New System.Windows.Forms.DataGridView()
         CType(Me.dgResultado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -42,12 +42,12 @@ Partial Class consultacambionombre
         '
         Me.txtCriterio.Location = New System.Drawing.Point(173, 11)
         Me.txtCriterio.Name = "txtCriterio"
-        Me.txtCriterio.Size = New System.Drawing.Size(182, 20)
+        Me.txtCriterio.Size = New System.Drawing.Size(229, 20)
         Me.txtCriterio.TabIndex = 1
         '
         'btnNAnt
         '
-        Me.btnNAnt.Location = New System.Drawing.Point(557, 8)
+        Me.btnNAnt.Location = New System.Drawing.Point(696, 8)
         Me.btnNAnt.Name = "btnNAnt"
         Me.btnNAnt.Size = New System.Drawing.Size(75, 23)
         Me.btnNAnt.TabIndex = 2
@@ -56,7 +56,7 @@ Partial Class consultacambionombre
         '
         'btnNAct
         '
-        Me.btnNAct.Location = New System.Drawing.Point(638, 8)
+        Me.btnNAct.Location = New System.Drawing.Point(777, 8)
         Me.btnNAct.Name = "btnNAct"
         Me.btnNAct.Size = New System.Drawing.Size(75, 23)
         Me.btnNAct.TabIndex = 3
@@ -65,7 +65,7 @@ Partial Class consultacambionombre
         '
         'btnIAct
         '
-        Me.btnIAct.Location = New System.Drawing.Point(395, 8)
+        Me.btnIAct.Location = New System.Drawing.Point(534, 8)
         Me.btnIAct.Name = "btnIAct"
         Me.btnIAct.Size = New System.Drawing.Size(75, 23)
         Me.btnIAct.TabIndex = 4
@@ -74,7 +74,7 @@ Partial Class consultacambionombre
         '
         'btnIDAnt
         '
-        Me.btnIDAnt.Location = New System.Drawing.Point(476, 8)
+        Me.btnIDAnt.Location = New System.Drawing.Point(615, 8)
         Me.btnIDAnt.Name = "btnIDAnt"
         Me.btnIDAnt.Size = New System.Drawing.Size(75, 23)
         Me.btnIDAnt.TabIndex = 5
@@ -84,16 +84,16 @@ Partial Class consultacambionombre
         'dgResultado
         '
         Me.dgResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgResultado.Location = New System.Drawing.Point(11, 37)
+        Me.dgResultado.Location = New System.Drawing.Point(12, 37)
         Me.dgResultado.Name = "dgResultado"
-        Me.dgResultado.Size = New System.Drawing.Size(727, 486)
+        Me.dgResultado.Size = New System.Drawing.Size(1038, 581)
         Me.dgResultado.TabIndex = 6
         '
         'consultacambionombre
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(751, 533)
+        Me.ClientSize = New System.Drawing.Size(1067, 644)
         Me.Controls.Add(Me.dgResultado)
         Me.Controls.Add(Me.btnIDAnt)
         Me.Controls.Add(Me.btnIAct)

@@ -70,7 +70,7 @@ Partial Class actualizarDetalle
         Me.cboTipoItem.FormattingEnabled = True
         Me.cboTipoItem.Location = New System.Drawing.Point(128, 29)
         Me.cboTipoItem.Name = "cboTipoItem"
-        Me.cboTipoItem.Size = New System.Drawing.Size(121, 21)
+        Me.cboTipoItem.Size = New System.Drawing.Size(290, 21)
         Me.cboTipoItem.TabIndex = 1
         '
         'Label2
@@ -87,7 +87,7 @@ Partial Class actualizarDetalle
         Me.txtCodigoVenta.Enabled = False
         Me.txtCodigoVenta.Location = New System.Drawing.Point(128, 3)
         Me.txtCodigoVenta.Name = "txtCodigoVenta"
-        Me.txtCodigoVenta.Size = New System.Drawing.Size(100, 20)
+        Me.txtCodigoVenta.Size = New System.Drawing.Size(217, 20)
         Me.txtCodigoVenta.TabIndex = 3
         '
         'Label3
@@ -112,7 +112,7 @@ Partial Class actualizarDetalle
         '
         Me.txtSerie.Location = New System.Drawing.Point(128, 86)
         Me.txtSerie.Name = "txtSerie"
-        Me.txtSerie.Size = New System.Drawing.Size(100, 20)
+        Me.txtSerie.Size = New System.Drawing.Size(174, 20)
         Me.txtSerie.TabIndex = 7
         '
         'Label5
@@ -128,12 +128,12 @@ Partial Class actualizarDetalle
         '
         Me.txtPrecioVenta.Location = New System.Drawing.Point(128, 112)
         Me.txtPrecioVenta.Name = "txtPrecioVenta"
-        Me.txtPrecioVenta.Size = New System.Drawing.Size(100, 20)
+        Me.txtPrecioVenta.Size = New System.Drawing.Size(174, 20)
         Me.txtPrecioVenta.TabIndex = 9
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(552, 105)
+        Me.btnCancelar.Location = New System.Drawing.Point(806, 106)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(155, 23)
         Me.btnCancelar.TabIndex = 12
@@ -142,7 +142,7 @@ Partial Class actualizarDetalle
         '
         'btnCambiar
         '
-        Me.btnCambiar.Location = New System.Drawing.Point(552, 42)
+        Me.btnCambiar.Location = New System.Drawing.Point(806, 43)
         Me.btnCambiar.Name = "btnCambiar"
         Me.btnCambiar.Size = New System.Drawing.Size(155, 23)
         Me.btnCambiar.TabIndex = 13
@@ -152,7 +152,7 @@ Partial Class actualizarDetalle
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(288, 11)
+        Me.Label6.Location = New System.Drawing.Point(437, 12)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(68, 13)
         Me.Label6.TabIndex = 15
@@ -161,7 +161,7 @@ Partial Class actualizarDetalle
         'txtVendedor
         '
         Me.txtVendedor.Enabled = False
-        Me.txtVendedor.Location = New System.Drawing.Point(389, 6)
+        Me.txtVendedor.Location = New System.Drawing.Point(538, 7)
         Me.txtVendedor.Name = "txtVendedor"
         Me.txtVendedor.ReadOnly = True
         Me.txtVendedor.Size = New System.Drawing.Size(144, 20)
@@ -170,7 +170,7 @@ Partial Class actualizarDetalle
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(288, 42)
+        Me.Label7.Location = New System.Drawing.Point(437, 43)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(18, 13)
         Me.Label7.TabIndex = 17
@@ -178,15 +178,15 @@ Partial Class actualizarDetalle
         '
         'txtLogin
         '
-        Me.txtLogin.Location = New System.Drawing.Point(389, 39)
+        Me.txtLogin.Location = New System.Drawing.Point(538, 40)
         Me.txtLogin.Name = "txtLogin"
-        Me.txtLogin.Size = New System.Drawing.Size(144, 20)
+        Me.txtLogin.Size = New System.Drawing.Size(247, 20)
         Me.txtLogin.TabIndex = 18
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(288, 73)
+        Me.Label8.Location = New System.Drawing.Point(437, 74)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(81, 13)
         Me.Label8.TabIndex = 19
@@ -195,16 +195,16 @@ Partial Class actualizarDetalle
         'txtFechaVenta
         '
         Me.txtFechaVenta.Enabled = False
-        Me.txtFechaVenta.Location = New System.Drawing.Point(389, 73)
+        Me.txtFechaVenta.Location = New System.Drawing.Point(538, 74)
         Me.txtFechaVenta.Name = "txtFechaVenta"
         Me.txtFechaVenta.ReadOnly = True
-        Me.txtFechaVenta.Size = New System.Drawing.Size(144, 20)
+        Me.txtFechaVenta.Size = New System.Drawing.Size(247, 20)
         Me.txtFechaVenta.TabIndex = 20
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(288, 109)
+        Me.Label9.Location = New System.Drawing.Point(437, 110)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(71, 13)
         Me.Label9.TabIndex = 21
@@ -213,7 +213,7 @@ Partial Class actualizarDetalle
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(288, 141)
+        Me.Label10.Location = New System.Drawing.Point(437, 142)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(69, 13)
         Me.Label10.TabIndex = 23
@@ -222,9 +222,9 @@ Partial Class actualizarDetalle
         'txtMTCN
         '
         Me.txtMTCN.Enabled = False
-        Me.txtMTCN.Location = New System.Drawing.Point(389, 134)
+        Me.txtMTCN.Location = New System.Drawing.Point(538, 135)
         Me.txtMTCN.Name = "txtMTCN"
-        Me.txtMTCN.Size = New System.Drawing.Size(144, 20)
+        Me.txtMTCN.Size = New System.Drawing.Size(247, 20)
         Me.txtMTCN.TabIndex = 24
         '
         'Label11
@@ -240,7 +240,7 @@ Partial Class actualizarDetalle
         '
         Me.txtNombreApellido.Location = New System.Drawing.Point(170, 206)
         Me.txtNombreApellido.Name = "txtNombreApellido"
-        Me.txtNombreApellido.Size = New System.Drawing.Size(276, 20)
+        Me.txtNombreApellido.Size = New System.Drawing.Size(512, 20)
         Me.txtNombreApellido.TabIndex = 26
         '
         'Label12
@@ -256,13 +256,13 @@ Partial Class actualizarDetalle
         '
         Me.txtCantidad.Location = New System.Drawing.Point(128, 143)
         Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.Size = New System.Drawing.Size(100, 20)
+        Me.txtCantidad.Size = New System.Drawing.Size(174, 20)
         Me.txtCantidad.TabIndex = 28
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(475, 209)
+        Me.Label13.Location = New System.Drawing.Point(41, 236)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(84, 13)
         Me.Label13.TabIndex = 29
@@ -270,16 +270,16 @@ Partial Class actualizarDetalle
         '
         'txtObservacion
         '
-        Me.txtObservacion.Location = New System.Drawing.Point(169, 241)
+        Me.txtObservacion.Location = New System.Drawing.Point(40, 252)
         Me.txtObservacion.Multiline = True
         Me.txtObservacion.Name = "txtObservacion"
         Me.txtObservacion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtObservacion.Size = New System.Drawing.Size(399, 127)
+        Me.txtObservacion.Size = New System.Drawing.Size(560, 192)
         Me.txtObservacion.TabIndex = 30
         '
         'btnActualizar
         '
-        Me.btnActualizar.Location = New System.Drawing.Point(552, 11)
+        Me.btnActualizar.Location = New System.Drawing.Point(806, 12)
         Me.btnActualizar.Name = "btnActualizar"
         Me.btnActualizar.Size = New System.Drawing.Size(155, 23)
         Me.btnActualizar.TabIndex = 31
@@ -292,12 +292,12 @@ Partial Class actualizarDetalle
         Me.cboItem.FormattingEnabled = True
         Me.cboItem.Location = New System.Drawing.Point(128, 58)
         Me.cboItem.Name = "cboItem"
-        Me.cboItem.Size = New System.Drawing.Size(121, 21)
+        Me.cboItem.Size = New System.Drawing.Size(290, 21)
         Me.cboItem.TabIndex = 32
         '
         'btnAnular
         '
-        Me.btnAnular.Location = New System.Drawing.Point(552, 73)
+        Me.btnAnular.Location = New System.Drawing.Point(806, 74)
         Me.btnAnular.Name = "btnAnular"
         Me.btnAnular.Size = New System.Drawing.Size(155, 23)
         Me.btnAnular.TabIndex = 33
@@ -308,15 +308,15 @@ Partial Class actualizarDetalle
         '
         Me.cboModalidadPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboModalidadPago.FormattingEnabled = True
-        Me.cboModalidadPago.Location = New System.Drawing.Point(389, 104)
+        Me.cboModalidadPago.Location = New System.Drawing.Point(538, 105)
         Me.cboModalidadPago.Name = "cboModalidadPago"
-        Me.cboModalidadPago.Size = New System.Drawing.Size(144, 21)
+        Me.cboModalidadPago.Size = New System.Drawing.Size(247, 21)
         Me.cboModalidadPago.TabIndex = 34
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(288, 170)
+        Me.Label14.Location = New System.Drawing.Point(437, 171)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(100, 13)
         Me.Label14.TabIndex = 35
@@ -325,10 +325,10 @@ Partial Class actualizarDetalle
         'txtFechaDepo
         '
         Me.txtFechaDepo.Enabled = False
-        Me.txtFechaDepo.Location = New System.Drawing.Point(389, 163)
+        Me.txtFechaDepo.Location = New System.Drawing.Point(538, 164)
         Me.txtFechaDepo.Name = "txtFechaDepo"
         Me.txtFechaDepo.ReadOnly = True
-        Me.txtFechaDepo.Size = New System.Drawing.Size(144, 20)
+        Me.txtFechaDepo.Size = New System.Drawing.Size(247, 20)
         Me.txtFechaDepo.TabIndex = 36
         '
         'Label15
@@ -352,7 +352,7 @@ Partial Class actualizarDetalle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(735, 371)
+        Me.ClientSize = New System.Drawing.Size(1260, 671)
         Me.Controls.Add(Me.cboNivel)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.txtFechaDepo)

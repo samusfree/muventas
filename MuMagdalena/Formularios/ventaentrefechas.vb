@@ -26,7 +26,7 @@ Public Class ventaentrefechas
         tipollamada = 0
     End Sub
 
-   
+
     Private Sub dgVentas_CellContentDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgVentas.CellContentDoubleClick
         If tipollamada = 1 Then
             Dim cod_venta As Integer = Nothing
@@ -35,7 +35,7 @@ Public Class ventaentrefechas
             cod_venta = dgVentas.CurrentRow.Cells(10).Value
             cod_item = dgVentas.CurrentRow.Cells(11).Value
             serie = dgVentas.CurrentRow.Cells(4).Value
-            actualizarDetalle.definirvalores(cod_item, cod_venta, serie)
+            actualizarDetalle.definirvalores(cod_item, cod_venta, serie, 0)
             actualizarDetalle.Show()
         End If
     End Sub

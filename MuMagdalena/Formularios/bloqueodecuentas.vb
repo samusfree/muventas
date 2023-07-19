@@ -17,7 +17,8 @@ Public Class bloqueodecuentas
             .Add("Permanente")
             .Add("Otro")
         End With
-        Me.MdiParent = menuPrincipal
+        MdiParent = menuPrincipal
+        WindowState = 2
         With cboSancion
         End With
         limpiar()

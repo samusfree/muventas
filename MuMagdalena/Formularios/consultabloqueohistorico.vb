@@ -12,7 +12,7 @@ Public Class consultabloqueohistorico
         dgBloqueo.DataSource = bloqueo.listarbloqueohistorico
     End Sub
 
- 
+
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         dgBloqueo.DataSource = Nothing

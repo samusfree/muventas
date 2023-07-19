@@ -56,7 +56,7 @@ Partial Class mantenimientoUsuarios
         '
         Me.txtNick.Location = New System.Drawing.Point(144, 66)
         Me.txtNick.Name = "txtNick"
-        Me.txtNick.Size = New System.Drawing.Size(100, 20)
+        Me.txtNick.Size = New System.Drawing.Size(202, 20)
         Me.txtNick.TabIndex = 2
         '
         'txtPassword
@@ -64,7 +64,7 @@ Partial Class mantenimientoUsuarios
         Me.txtPassword.Location = New System.Drawing.Point(144, 95)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassword.Size = New System.Drawing.Size(100, 20)
+        Me.txtPassword.Size = New System.Drawing.Size(202, 20)
         Me.txtPassword.TabIndex = 3
         '
         'Label1
@@ -79,7 +79,7 @@ Partial Class mantenimientoUsuarios
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(337, 63)
+        Me.btnAgregar.Location = New System.Drawing.Point(624, 66)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(142, 23)
         Me.btnAgregar.TabIndex = 5
@@ -89,7 +89,7 @@ Partial Class mantenimientoUsuarios
         'btnModificar
         '
         Me.btnModificar.Enabled = False
-        Me.btnModificar.Location = New System.Drawing.Point(337, 103)
+        Me.btnModificar.Location = New System.Drawing.Point(624, 106)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(142, 23)
         Me.btnModificar.TabIndex = 6
@@ -101,12 +101,12 @@ Partial Class mantenimientoUsuarios
         Me.dgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgUsuarios.Location = New System.Drawing.Point(28, 161)
         Me.dgUsuarios.Name = "dgUsuarios"
-        Me.dgUsuarios.Size = New System.Drawing.Size(288, 192)
+        Me.dgUsuarios.Size = New System.Drawing.Size(560, 288)
         Me.dgUsuarios.TabIndex = 7
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(337, 178)
+        Me.btnCancelar.Location = New System.Drawing.Point(624, 181)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(142, 23)
         Me.btnCancelar.TabIndex = 8
@@ -128,13 +128,13 @@ Partial Class mantenimientoUsuarios
         Me.cboTipousuario.FormattingEnabled = True
         Me.cboTipousuario.Location = New System.Drawing.Point(144, 125)
         Me.cboTipousuario.Name = "cboTipousuario"
-        Me.cboTipousuario.Size = New System.Drawing.Size(121, 21)
+        Me.cboTipousuario.Size = New System.Drawing.Size(202, 21)
         Me.cboTipousuario.TabIndex = 10
         '
         'btnCamClave
         '
         Me.btnCamClave.Enabled = False
-        Me.btnCamClave.Location = New System.Drawing.Point(337, 139)
+        Me.btnCamClave.Location = New System.Drawing.Point(624, 142)
         Me.btnCamClave.Name = "btnCamClave"
         Me.btnCamClave.Size = New System.Drawing.Size(142, 23)
         Me.btnCamClave.TabIndex = 11
@@ -145,7 +145,7 @@ Partial Class mantenimientoUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(508, 379)
+        Me.ClientSize = New System.Drawing.Size(817, 461)
         Me.Controls.Add(Me.btnCamClave)
         Me.Controls.Add(Me.cboTipousuario)
         Me.Controls.Add(Me.Label2)

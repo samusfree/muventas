@@ -79,10 +79,10 @@ Partial Class ventaentrefechas
         Me.dgVentas.AllowUserToDeleteRows = False
         Me.dgVentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgVentas.Location = New System.Drawing.Point(12, 84)
+        Me.dgVentas.Location = New System.Drawing.Point(15, 102)
         Me.dgVentas.Name = "dgVentas"
         Me.dgVentas.ReadOnly = True
-        Me.dgVentas.Size = New System.Drawing.Size(960, 540)
+        Me.dgVentas.Size = New System.Drawing.Size(981, 423)
         Me.dgVentas.TabIndex = 5
         '
         'Label3
@@ -125,7 +125,7 @@ Partial Class ventaentrefechas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(984, 636)
+        Me.ClientSize = New System.Drawing.Size(1008, 537)
         Me.Controls.Add(Me.btnhisto)
         Me.Controls.Add(Me.btnNorCam)
         Me.Controls.Add(Me.txtTotalVendido)

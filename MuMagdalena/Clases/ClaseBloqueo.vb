@@ -1,5 +1,5 @@
-Imports System.Data.SqlClient
 Imports System.Data
+Imports System.Data.SqlClient
 
 Public Class ClaseBloqueo
     Dim cn As New claseconexion

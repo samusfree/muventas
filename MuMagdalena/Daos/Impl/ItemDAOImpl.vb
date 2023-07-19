@@ -1,6 +1,5 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
-Imports SistemaVentas
 
 Public Class ItemDAOImpl
     Implements ItemDAO

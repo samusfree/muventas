@@ -19,7 +19,7 @@
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>
     </AssemblyOriginatorKeyFile>
-    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\favicon.ico</ApplicationIcon>
     <TargetZone>LocalIntranet</TargetZone>
     <DelaySign>false</DelaySign>
     <FileUpgradeFlags>
@@ -28,7 +28,7 @@
     </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetFrameworkProfile />
     <PublishUrl>d:\samus\Desktop\Magdalena\</PublishUrl>
     <Install>true</Install>
@@ -87,7 +87,6 @@
     <Import Include="System.Diagnostics" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Clases\ClaseBloqueo.vb" />
     <Compile Include="Clases\ClaseCambioDatos.vb" />
     <Compile Include="Clases\ClaseCambioNombre.vb" />
@@ -261,6 +260,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -284,7 +284,6 @@
     <Compile Include="Formularios\ventaentrefechas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Settings.vb" />
     <Compile Include="Utils\AppConstants.vb" />
     <Compile Include="Utils\VentaTempUtil.vb" />
   </ItemGroup>
@@ -436,7 +435,7 @@
     <None Include="Resources\logo.JPG" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="favicon.ico" />
+    <Content Include="Resources\favicon.ico" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -39,14 +39,15 @@ Partial Class agregarDetalleItemsVenta
         Me.dgItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgItems.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.correlativo, Me.cod_item, Me.descripcion, Me.serie, Me.precio})
+        Me.dgItems.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke
         Me.dgItems.Location = New System.Drawing.Point(12, 12)
         Me.dgItems.Name = "dgItems"
-        Me.dgItems.Size = New System.Drawing.Size(764, 467)
+        Me.dgItems.Size = New System.Drawing.Size(887, 511)
         Me.dgItems.TabIndex = 0
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(793, 12)
+        Me.btnAceptar.Location = New System.Drawing.Point(905, 12)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(95, 44)
         Me.btnAceptar.TabIndex = 1
@@ -79,22 +80,24 @@ Partial Class agregarDetalleItemsVenta
         '
         'serie
         '
+        Me.serie.DataPropertyName = "serie"
         Me.serie.FillWeight = 200.0!
         Me.serie.HeaderText = "Serie"
+        Me.serie.MinimumWidth = 100
         Me.serie.Name = "serie"
-        Me.serie.Width = 56
         '
         'precio
         '
+        Me.precio.DataPropertyName = "precionuevo"
         Me.precio.HeaderText = "Precio"
+        Me.precio.MinimumWidth = 100
         Me.precio.Name = "precio"
-        Me.precio.Width = 62
         '
         'agregarDetalleItemsVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(900, 491)
+        Me.ClientSize = New System.Drawing.Size(1260, 671)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.dgItems)
         Me.Name = "agregarDetalleItemsVenta"
@@ -106,9 +109,9 @@ Partial Class agregarDetalleItemsVenta
 
     Friend WithEvents dgItems As System.Windows.Forms.DataGridView
     Friend WithEvents btnAceptar As System.Windows.Forms.Button
-    Friend WithEvents correlativo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents cod_item As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents descripcion As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents serie As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents precio As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents correlativo As Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cod_item As Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents descripcion As Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents serie As Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents precio As Windows.Forms.DataGridViewTextBoxColumn
 End Class

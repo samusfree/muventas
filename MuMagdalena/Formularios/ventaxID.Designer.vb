@@ -26,6 +26,7 @@ Partial Class ventaxID
         Me.dgVentas = New System.Windows.Forms.DataGridView()
         Me.btnSerie = New System.Windows.Forms.Button()
         Me.btnVentasMTCN = New System.Windows.Forms.Button()
+        Me.btnCambio = New System.Windows.Forms.Button()
         CType(Me.dgVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -47,7 +48,7 @@ Partial Class ventaxID
         '
         'btnConsultar
         '
-        Me.btnConsultar.Location = New System.Drawing.Point(426, 5)
+        Me.btnConsultar.Location = New System.Drawing.Point(440, 5)
         Me.btnConsultar.Name = "btnConsultar"
         Me.btnConsultar.Size = New System.Drawing.Size(127, 39)
         Me.btnConsultar.TabIndex = 2
@@ -56,7 +57,7 @@ Partial Class ventaxID
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.Location = New System.Drawing.Point(836, 5)
+        Me.btnLimpiar.Location = New System.Drawing.Point(850, 5)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(123, 39)
         Me.btnLimpiar.TabIndex = 3
@@ -73,12 +74,13 @@ Partial Class ventaxID
         Me.dgVentas.Location = New System.Drawing.Point(12, 55)
         Me.dgVentas.Name = "dgVentas"
         Me.dgVentas.ReadOnly = True
-        Me.dgVentas.Size = New System.Drawing.Size(960, 569)
+        Me.dgVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgVentas.Size = New System.Drawing.Size(1227, 614)
         Me.dgVentas.TabIndex = 4
         '
         'btnSerie
         '
-        Me.btnSerie.Location = New System.Drawing.Point(569, 5)
+        Me.btnSerie.Location = New System.Drawing.Point(583, 5)
         Me.btnSerie.Name = "btnSerie"
         Me.btnSerie.Size = New System.Drawing.Size(132, 39)
         Me.btnSerie.TabIndex = 5
@@ -87,18 +89,30 @@ Partial Class ventaxID
         '
         'btnVentasMTCN
         '
-        Me.btnVentasMTCN.Location = New System.Drawing.Point(707, 5)
+        Me.btnVentasMTCN.Location = New System.Drawing.Point(721, 5)
         Me.btnVentasMTCN.Name = "btnVentasMTCN"
         Me.btnVentasMTCN.Size = New System.Drawing.Size(123, 39)
         Me.btnVentasMTCN.TabIndex = 8
         Me.btnVentasMTCN.Text = "C. MTCN o OP"
         Me.btnVentasMTCN.UseVisualStyleBackColor = True
         '
+        'btnCambio
+        '
+        Me.btnCambio.BackColor = System.Drawing.Color.SteelBlue
+        Me.btnCambio.Location = New System.Drawing.Point(1125, 5)
+        Me.btnCambio.Name = "btnCambio"
+        Me.btnCambio.Size = New System.Drawing.Size(127, 39)
+        Me.btnCambio.TabIndex = 9
+        Me.btnCambio.Text = "Set para cambio"
+        Me.btnCambio.UseVisualStyleBackColor = False
+        Me.btnCambio.Visible = False
+        '
         'ventaxID
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(984, 636)
+        Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.btnCambio)
         Me.Controls.Add(Me.btnVentasMTCN)
         Me.Controls.Add(Me.btnSerie)
         Me.Controls.Add(Me.dgVentas)
@@ -121,4 +135,5 @@ Partial Class ventaxID
     Friend WithEvents dgVentas As System.Windows.Forms.DataGridView
     Friend WithEvents btnSerie As System.Windows.Forms.Button
     Friend WithEvents btnVentasMTCN As System.Windows.Forms.Button
+    Friend WithEvents btnCambio As Windows.Forms.Button
 End Class

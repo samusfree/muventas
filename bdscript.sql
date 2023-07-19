@@ -690,15 +690,11 @@ GO
 
 /*Procedure procedure que cambia la venta a cambiada*/
 create procedure [cambioitemoset]
-@cod_venta as int,
-@cod_item as int,
-@serie as varchar(100)
+@cod_venta as int
 as 
 update tb_venta 
 set estado = 'Item o Set Cambiado'
-where cod_venta = @cod_venta 
-and cod_item = @cod_item 
-and serie = @serie COLLATE SQL_Latin1_General_Cp1_CS_AS
+where cod_venta = @cod_venta
 
 
 

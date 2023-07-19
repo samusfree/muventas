@@ -32,6 +32,7 @@ Partial Class menuPrincipal
         Me.MantenimientoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ItemsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ItemPadrToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsulToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentasXIdToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentasXIDToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -49,7 +50,6 @@ Partial Class menuPrincipal
         Me.ConsultaCambioDeDatosHistoricoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ItemPadrToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mStripPrincipal.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -58,7 +58,7 @@ Partial Class menuPrincipal
         Me.mStripPrincipal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SessionToolStripMenuItem, Me.TransaccionesToolStripMenuItem, Me.MantenimientoToolStripMenuItem, Me.ConsulToolStripMenuItem, Me.AyudaToolStripMenuItem})
         Me.mStripPrincipal.Location = New System.Drawing.Point(0, 0)
         Me.mStripPrincipal.Name = "mStripPrincipal"
-        Me.mStripPrincipal.Size = New System.Drawing.Size(1008, 24)
+        Me.mStripPrincipal.Size = New System.Drawing.Size(1264, 24)
         Me.mStripPrincipal.TabIndex = 1
         Me.mStripPrincipal.Text = "MenuStrip1"
         '
@@ -86,7 +86,7 @@ Partial Class menuPrincipal
         '
         Me.TransaccionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VentasToolStripMenuItem1, Me.CambioDeNombreToolStripMenuItem, Me.BloqueoDeCuentasToolStripMenuItem, Me.CambioDeDatosToolStripMenuItem})
         Me.TransaccionesToolStripMenuItem.Name = "TransaccionesToolStripMenuItem"
-        Me.TransaccionesToolStripMenuItem.Size = New System.Drawing.Size(87, 20)
+        Me.TransaccionesToolStripMenuItem.Size = New System.Drawing.Size(86, 20)
         Me.TransaccionesToolStripMenuItem.Text = "Transaciones"
         '
         'VentasToolStripMenuItem1
@@ -123,14 +123,20 @@ Partial Class menuPrincipal
         'UsuariosToolStripMenuItem
         '
         Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
-        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
         Me.UsuariosToolStripMenuItem.Text = "Usuarios"
         '
         'ItemsToolStripMenuItem
         '
         Me.ItemsToolStripMenuItem.Name = "ItemsToolStripMenuItem"
-        Me.ItemsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ItemsToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
         Me.ItemsToolStripMenuItem.Text = "Items"
+        '
+        'ItemPadrToolStripMenuItem
+        '
+        Me.ItemPadrToolStripMenuItem.Name = "ItemPadrToolStripMenuItem"
+        Me.ItemPadrToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.ItemPadrToolStripMenuItem.Text = "Item Padre"
         '
         'ConsulToolStripMenuItem
         '
@@ -240,22 +246,16 @@ Partial Class menuPrincipal
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
-        'ItemPadrToolStripMenuItem
-        '
-        Me.ItemPadrToolStripMenuItem.Name = "ItemPadrToolStripMenuItem"
-        Me.ItemPadrToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ItemPadrToolStripMenuItem.Text = "Item Padre"
-        '
         'menuPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1008, 701)
+        Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.Controls.Add(Me.mStripPrincipal)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.mStripPrincipal
-        Me.MaximumSize = New System.Drawing.Size(1024, 740)
+        Me.MaximumSize = New System.Drawing.Size(1280, 720)
         Me.Name = "menuPrincipal"
         Me.Text = "Sistema Ventas"
         Me.mStripPrincipal.ResumeLayout(False)

@@ -1,7 +1,7 @@
-Imports System.Threading
-Imports System.Globalization
-Imports System.Windows.Forms
 Imports System.Data
+Imports System.Globalization
+Imports System.Threading
+Imports System.Windows.Forms
 
 Public Class ventas
     Dim parametros As New ParametroDAOImpl

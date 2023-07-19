@@ -1,5 +1,5 @@
-Imports System.Data.SqlClient
 Imports System.Data
+Imports System.Data.SqlClient
 Public Class ClaseCambioNombre
     Dim cn As New claseconexion
     Event mensaje(ByVal mensaje As String)

@@ -98,7 +98,7 @@ Partial Class about
         Me.LabelVersion.Name = "LabelVersion"
         Me.LabelVersion.Size = New System.Drawing.Size(281, 17)
         Me.LabelVersion.TabIndex = 0
-        Me.LabelVersion.Text = "Versión 4.0 "
+        Me.LabelVersion.Text = "Versión 5.0 "
         Me.LabelVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LabelCopyright
@@ -110,7 +110,7 @@ Partial Class about
         Me.LabelCopyright.Name = "LabelCopyright"
         Me.LabelCopyright.Size = New System.Drawing.Size(281, 17)
         Me.LabelCopyright.TabIndex = 0
-        Me.LabelCopyright.Text = "Copyright 2016"
+        Me.LabelCopyright.Text = "Copyright 2023"
         Me.LabelCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LabelCompanyName
@@ -137,9 +137,7 @@ Partial Class about
         Me.TextBoxDescription.Size = New System.Drawing.Size(281, 123)
         Me.TextBoxDescription.TabIndex = 0
         Me.TextBoxDescription.TabStop = False
-        Me.TextBoxDescription.Text = "Desarrollado por Samuel Gonzales Garcia, para " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Mu Magdalena y Mu San Luis" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Par" &
-    "a soporte escribir a samusfree@hotmail.com" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "o visitar la web " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "http://sptechnolo" &
-    "gies.co.cc"
+        Me.TextBoxDescription.Text = "Desarrollado por Samuel Gonzales Garcia, para " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Mu Magdalena y Mu San Luis"
         '
         'OKButton
         '

@@ -36,12 +36,12 @@ Partial Class mantenimientoItemsPadre
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.cboCerrar = New System.Windows.Forms.Button()
         Me.dgItems = New System.Windows.Forms.DataGridView()
-        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.correlativo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cod_item = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tipoItem = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgItems, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -55,7 +55,7 @@ Partial Class mantenimientoItemsPadre
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Location = New System.Drawing.Point(13, 13)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(662, 75)
+        Me.GroupBox1.Size = New System.Drawing.Size(685, 75)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Item Padre"
@@ -147,7 +147,7 @@ Partial Class mantenimientoItemsPadre
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(773, 13)
+        Me.btnAgregar.Location = New System.Drawing.Point(704, 13)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(136, 32)
         Me.btnAgregar.TabIndex = 15
@@ -156,7 +156,7 @@ Partial Class mantenimientoItemsPadre
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(773, 65)
+        Me.btnCancelar.Location = New System.Drawing.Point(862, 12)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(136, 33)
         Me.btnCancelar.TabIndex = 16
@@ -165,7 +165,7 @@ Partial Class mantenimientoItemsPadre
         '
         'cboCerrar
         '
-        Me.cboCerrar.Location = New System.Drawing.Point(773, 116)
+        Me.cboCerrar.Location = New System.Drawing.Point(787, 62)
         Me.cboCerrar.Name = "cboCerrar"
         Me.cboCerrar.Size = New System.Drawing.Size(136, 37)
         Me.cboCerrar.TabIndex = 17
@@ -178,20 +178,11 @@ Partial Class mantenimientoItemsPadre
         Me.dgItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgItems.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.correlativo, Me.cod_item, Me.descripcion, Me.tipoItem, Me.precio})
-        Me.dgItems.Location = New System.Drawing.Point(12, 197)
+        Me.dgItems.Location = New System.Drawing.Point(22, 197)
         Me.dgItems.Name = "dgItems"
         Me.dgItems.ReadOnly = True
-        Me.dgItems.Size = New System.Drawing.Size(809, 427)
+        Me.dgItems.Size = New System.Drawing.Size(1014, 379)
         Me.dgItems.TabIndex = 18
-        '
-        'btnEliminar
-        '
-        Me.btnEliminar.Location = New System.Drawing.Point(836, 197)
-        Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(136, 32)
-        Me.btnEliminar.TabIndex = 19
-        Me.btnEliminar.Text = "ELIMINAR"
-        Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'correlativo
         '
@@ -233,11 +224,20 @@ Partial Class mantenimientoItemsPadre
         Me.precio.ReadOnly = True
         Me.precio.Width = 62
         '
+        'btnEliminar
+        '
+        Me.btnEliminar.Location = New System.Drawing.Point(862, 159)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(136, 32)
+        Me.btnEliminar.TabIndex = 19
+        Me.btnEliminar.Text = "ELIMINAR"
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        '
         'mantenimientoItemsPadre
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(984, 636)
+        Me.ClientSize = New System.Drawing.Size(1048, 588)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.dgItems)
         Me.Controls.Add(Me.cboCerrar)

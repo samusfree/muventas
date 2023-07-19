@@ -1,7 +1,5 @@
-﻿Imports System.Resources
-
-Imports System
-Imports System.Reflection
+﻿Imports System.Reflection
+Imports System.Resources
 Imports System.Runtime.InteropServices
 
 ' La información general sobre un ensamblado se controla mediante el siguiente 
@@ -10,17 +8,17 @@ Imports System.Runtime.InteropServices
 
 ' Revisar los valores de los atributos del ensamblado
 
-<Assembly: AssemblyTitle("Sistema de Ventas Mu")> 
-<Assembly: AssemblyDescription("Sistema de Ventas MU")> 
-<Assembly: AssemblyCompany("SP Technologies")> 
-<Assembly: AssemblyProduct("Sistema de Ventas MU")> 
-<Assembly: AssemblyCopyright("©  2010")> 
-<Assembly: AssemblyTrademark("Sistema SP")> 
+<Assembly: AssemblyTitle("Sistema Ventas MU")>
+<Assembly: AssemblyDescription("Sistema Ventas MU")>
+<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyProduct("Sistema Ventas MU")>
+<Assembly: AssemblyCopyright("©  2023")>
+<Assembly: AssemblyTrademark("")>
 
-<Assembly: ComVisible(False)> 
+<Assembly: ComVisible(False)>
 
 'El siguiente GUID sirve como identificador de la biblioteca de tipos si este proyecto se expone a COM
-<Assembly: Guid("665658e2-f2c9-4a3a-8e7f-1e1e71d26e50")> 
+<Assembly: Guid("665658e2-f2c9-4a3a-8e7f-1e1e71d26e50")>
 
 ' La información de versión de un ensamblado consta de los cuatro valores siguientes:
 '
@@ -33,7 +31,7 @@ Imports System.Runtime.InteropServices
 ' mediante el asterisco ('*'), como se muestra a continuación:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("3.1.1.1")> 
-<Assembly: AssemblyFileVersion("3.1.1.1")> 
+<Assembly: AssemblyVersion("4.0.0.1")>
+<Assembly: AssemblyFileVersion("4.0.0.1")>
 
-<Assembly: NeutralResourcesLanguageAttribute("es-PE")> 
+<Assembly: NeutralResourcesLanguageAttribute("es-PE")>

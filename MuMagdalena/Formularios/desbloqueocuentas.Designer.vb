@@ -43,7 +43,7 @@ Partial Class desbloqueocuentas
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 26)
+        Me.Label1.Location = New System.Drawing.Point(19, 26)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(72, 13)
         Me.Label1.TabIndex = 0
@@ -52,16 +52,16 @@ Partial Class desbloqueocuentas
         'txtCBloqueo
         '
         Me.txtCBloqueo.Enabled = False
-        Me.txtCBloqueo.Location = New System.Drawing.Point(126, 23)
+        Me.txtCBloqueo.Location = New System.Drawing.Point(133, 23)
         Me.txtCBloqueo.Name = "txtCBloqueo"
         Me.txtCBloqueo.ReadOnly = True
-        Me.txtCBloqueo.Size = New System.Drawing.Size(100, 20)
+        Me.txtCBloqueo.Size = New System.Drawing.Size(223, 20)
         Me.txtCBloqueo.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 56)
+        Me.Label2.Location = New System.Drawing.Point(19, 56)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(97, 13)
         Me.Label2.TabIndex = 2
@@ -69,16 +69,16 @@ Partial Class desbloqueocuentas
         '
         'txtFBloqueo
         '
-        Me.txtFBloqueo.Location = New System.Drawing.Point(126, 53)
+        Me.txtFBloqueo.Location = New System.Drawing.Point(133, 53)
         Me.txtFBloqueo.Name = "txtFBloqueo"
         Me.txtFBloqueo.ReadOnly = True
-        Me.txtFBloqueo.Size = New System.Drawing.Size(100, 20)
+        Me.txtFBloqueo.Size = New System.Drawing.Size(223, 20)
         Me.txtFBloqueo.TabIndex = 3
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(204, 95)
+        Me.Label3.Location = New System.Drawing.Point(211, 95)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(68, 13)
         Me.Label3.TabIndex = 4
@@ -86,16 +86,16 @@ Partial Class desbloqueocuentas
         '
         'txtVendedor
         '
-        Me.txtVendedor.Location = New System.Drawing.Point(314, 91)
+        Me.txtVendedor.Location = New System.Drawing.Point(321, 91)
         Me.txtVendedor.Name = "txtVendedor"
         Me.txtVendedor.ReadOnly = True
-        Me.txtVendedor.Size = New System.Drawing.Size(100, 20)
+        Me.txtVendedor.Size = New System.Drawing.Size(194, 20)
         Me.txtVendedor.TabIndex = 5
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(286, 23)
+        Me.Label4.Location = New System.Drawing.Point(423, 23)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(18, 13)
         Me.Label4.TabIndex = 6
@@ -103,16 +103,16 @@ Partial Class desbloqueocuentas
         '
         'txtLogin
         '
-        Me.txtLogin.Location = New System.Drawing.Point(399, 16)
+        Me.txtLogin.Location = New System.Drawing.Point(536, 16)
         Me.txtLogin.Name = "txtLogin"
         Me.txtLogin.ReadOnly = True
-        Me.txtLogin.Size = New System.Drawing.Size(100, 20)
+        Me.txtLogin.Size = New System.Drawing.Size(206, 20)
         Me.txtLogin.TabIndex = 7
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(285, 47)
+        Me.Label5.Location = New System.Drawing.Point(422, 47)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(71, 13)
         Me.Label5.TabIndex = 8
@@ -120,16 +120,16 @@ Partial Class desbloqueocuentas
         '
         'txtPersoanej
         '
-        Me.txtPersoanej.Location = New System.Drawing.Point(399, 44)
+        Me.txtPersoanej.Location = New System.Drawing.Point(536, 44)
         Me.txtPersoanej.Name = "txtPersoanej"
         Me.txtPersoanej.ReadOnly = True
-        Me.txtPersoanej.Size = New System.Drawing.Size(100, 20)
+        Me.txtPersoanej.Size = New System.Drawing.Size(206, 20)
         Me.txtPersoanej.TabIndex = 9
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(78, 190)
+        Me.Label6.Location = New System.Drawing.Point(23, 190)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(70, 13)
         Me.Label6.TabIndex = 10
@@ -137,16 +137,16 @@ Partial Class desbloqueocuentas
         '
         'txtRBloqueo
         '
-        Me.txtRBloqueo.Location = New System.Drawing.Point(19, 235)
+        Me.txtRBloqueo.Location = New System.Drawing.Point(22, 226)
         Me.txtRBloqueo.Multiline = True
         Me.txtRBloqueo.Name = "txtRBloqueo"
-        Me.txtRBloqueo.Size = New System.Drawing.Size(236, 83)
+        Me.txtRBloqueo.Size = New System.Drawing.Size(415, 264)
         Me.txtRBloqueo.TabIndex = 11
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(16, 129)
+        Me.Label7.Location = New System.Drawing.Point(23, 129)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(55, 13)
         Me.Label7.TabIndex = 12
@@ -154,23 +154,23 @@ Partial Class desbloqueocuentas
         '
         'txtSancion
         '
-        Me.txtSancion.Location = New System.Drawing.Point(126, 129)
+        Me.txtSancion.Location = New System.Drawing.Point(133, 129)
         Me.txtSancion.Name = "txtSancion"
-        Me.txtSancion.Size = New System.Drawing.Size(358, 20)
+        Me.txtSancion.Size = New System.Drawing.Size(609, 20)
         Me.txtSancion.TabIndex = 13
         '
         'txtRDesbloqueo
         '
-        Me.txtRDesbloqueo.Location = New System.Drawing.Point(291, 235)
+        Me.txtRDesbloqueo.Location = New System.Drawing.Point(456, 226)
         Me.txtRDesbloqueo.Multiline = True
         Me.txtRDesbloqueo.Name = "txtRDesbloqueo"
-        Me.txtRDesbloqueo.Size = New System.Drawing.Size(302, 83)
+        Me.txtRDesbloqueo.Size = New System.Drawing.Size(409, 264)
         Me.txtRDesbloqueo.TabIndex = 14
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(416, 190)
+        Me.Label8.Location = New System.Drawing.Point(453, 190)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(92, 13)
         Me.Label8.TabIndex = 15
@@ -178,7 +178,7 @@ Partial Class desbloqueocuentas
         '
         'btnDesbloquear
         '
-        Me.btnDesbloquear.Location = New System.Drawing.Point(538, 57)
+        Me.btnDesbloquear.Location = New System.Drawing.Point(768, 53)
         Me.btnDesbloquear.Name = "btnDesbloquear"
         Me.btnDesbloquear.Size = New System.Drawing.Size(97, 40)
         Me.btnDesbloquear.TabIndex = 16
@@ -187,7 +187,7 @@ Partial Class desbloqueocuentas
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(538, 111)
+        Me.btnCancelar.Location = New System.Drawing.Point(768, 107)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(97, 38)
         Me.btnCancelar.TabIndex = 17
@@ -196,7 +196,7 @@ Partial Class desbloqueocuentas
         '
         'btnActualizar
         '
-        Me.btnActualizar.Location = New System.Drawing.Point(538, 12)
+        Me.btnActualizar.Location = New System.Drawing.Point(768, 8)
         Me.btnActualizar.Name = "btnActualizar"
         Me.btnActualizar.Size = New System.Drawing.Size(97, 35)
         Me.btnActualizar.TabIndex = 18
@@ -207,7 +207,7 @@ Partial Class desbloqueocuentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(647, 330)
+        Me.ClientSize = New System.Drawing.Size(928, 565)
         Me.Controls.Add(Me.btnActualizar)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnDesbloquear)

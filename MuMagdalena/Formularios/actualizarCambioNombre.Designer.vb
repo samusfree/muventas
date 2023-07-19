@@ -93,7 +93,7 @@ Partial Class actualizarCambioNombre
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(257, 19)
+        Me.Label6.Location = New System.Drawing.Point(459, 19)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(42, 13)
         Me.Label6.TabIndex = 5
@@ -102,7 +102,7 @@ Partial Class actualizarCambioNombre
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(257, 54)
+        Me.Label7.Location = New System.Drawing.Point(459, 54)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(59, 13)
         Me.Label7.TabIndex = 6
@@ -111,7 +111,7 @@ Partial Class actualizarCambioNombre
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(257, 90)
+        Me.Label8.Location = New System.Drawing.Point(459, 90)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(60, 13)
         Me.Label8.TabIndex = 7
@@ -120,7 +120,7 @@ Partial Class actualizarCambioNombre
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(257, 120)
+        Me.Label9.Location = New System.Drawing.Point(459, 120)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(82, 13)
         Me.Label9.TabIndex = 8
@@ -131,36 +131,36 @@ Partial Class actualizarCambioNombre
         Me.cboRaza.FormattingEnabled = True
         Me.cboRaza.Location = New System.Drawing.Point(95, 112)
         Me.cboRaza.Name = "cboRaza"
-        Me.cboRaza.Size = New System.Drawing.Size(135, 21)
+        Me.cboRaza.Size = New System.Drawing.Size(329, 21)
         Me.cboRaza.TabIndex = 9
         '
         'txtPjAntiguo
         '
         Me.txtPjAntiguo.Location = New System.Drawing.Point(95, 83)
         Me.txtPjAntiguo.Name = "txtPjAntiguo"
-        Me.txtPjAntiguo.Size = New System.Drawing.Size(135, 20)
+        Me.txtPjAntiguo.Size = New System.Drawing.Size(329, 20)
         Me.txtPjAntiguo.TabIndex = 10
         '
         'txtPJNuevo
         '
-        Me.txtPJNuevo.Location = New System.Drawing.Point(343, 83)
+        Me.txtPJNuevo.Location = New System.Drawing.Point(545, 83)
         Me.txtPJNuevo.Name = "txtPJNuevo"
-        Me.txtPJNuevo.Size = New System.Drawing.Size(130, 20)
+        Me.txtPJNuevo.Size = New System.Drawing.Size(322, 20)
         Me.txtPJNuevo.TabIndex = 11
         '
         'txtIDNuevo
         '
-        Me.txtIDNuevo.Location = New System.Drawing.Point(343, 47)
+        Me.txtIDNuevo.Location = New System.Drawing.Point(545, 47)
         Me.txtIDNuevo.Name = "txtIDNuevo"
-        Me.txtIDNuevo.Size = New System.Drawing.Size(130, 20)
+        Me.txtIDNuevo.Size = New System.Drawing.Size(322, 20)
         Me.txtIDNuevo.TabIndex = 12
         '
         'txtFecha
         '
-        Me.txtFecha.Location = New System.Drawing.Point(343, 16)
+        Me.txtFecha.Location = New System.Drawing.Point(545, 16)
         Me.txtFecha.Name = "txtFecha"
         Me.txtFecha.ReadOnly = True
-        Me.txtFecha.Size = New System.Drawing.Size(130, 20)
+        Me.txtFecha.Size = New System.Drawing.Size(322, 20)
         Me.txtFecha.TabIndex = 13
         '
         'txtVendedor
@@ -175,7 +175,7 @@ Partial Class actualizarCambioNombre
         '
         Me.txtIdAntiguo.Location = New System.Drawing.Point(95, 51)
         Me.txtIdAntiguo.Name = "txtIdAntiguo"
-        Me.txtIdAntiguo.Size = New System.Drawing.Size(135, 20)
+        Me.txtIdAntiguo.Size = New System.Drawing.Size(329, 20)
         Me.txtIdAntiguo.TabIndex = 15
         '
         'txtCodigo
@@ -183,19 +183,19 @@ Partial Class actualizarCambioNombre
         Me.txtCodigo.Location = New System.Drawing.Point(95, 16)
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.ReadOnly = True
-        Me.txtCodigo.Size = New System.Drawing.Size(135, 20)
+        Me.txtCodigo.Size = New System.Drawing.Size(329, 20)
         Me.txtCodigo.TabIndex = 16
         '
         'txtCantResets
         '
-        Me.txtCantResets.Location = New System.Drawing.Point(343, 117)
+        Me.txtCantResets.Location = New System.Drawing.Point(545, 117)
         Me.txtCantResets.Name = "txtCantResets"
-        Me.txtCantResets.Size = New System.Drawing.Size(130, 20)
+        Me.txtCantResets.Size = New System.Drawing.Size(322, 20)
         Me.txtCantResets.TabIndex = 17
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(512, 13)
+        Me.Button1.Location = New System.Drawing.Point(898, 19)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(102, 23)
         Me.Button1.TabIndex = 18
@@ -204,7 +204,7 @@ Partial Class actualizarCambioNombre
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(512, 83)
+        Me.Button3.Location = New System.Drawing.Point(898, 89)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(102, 23)
         Me.Button3.TabIndex = 20
@@ -213,7 +213,7 @@ Partial Class actualizarCambioNombre
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(512, 47)
+        Me.Button2.Location = New System.Drawing.Point(898, 53)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(102, 23)
         Me.Button2.TabIndex = 19
@@ -224,7 +224,7 @@ Partial Class actualizarCambioNombre
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(650, 351)
+        Me.ClientSize = New System.Drawing.Size(1260, 351)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)

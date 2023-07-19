@@ -22,6 +22,7 @@ Partial Class bloqueodecuentas
         Me.btnGrabar = New System.Windows.Forms.Button()
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtVendedor = New System.Windows.Forms.TextBox()
         Me.txtSancion = New System.Windows.Forms.TextBox()
         Me.txtRazonBloqueo = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -34,13 +35,12 @@ Partial Class bloqueodecuentas
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtVendedor = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnGrabar
         '
-        Me.btnGrabar.Location = New System.Drawing.Point(547, 32)
+        Me.btnGrabar.Location = New System.Drawing.Point(837, 19)
         Me.btnGrabar.Name = "btnGrabar"
         Me.btnGrabar.Size = New System.Drawing.Size(75, 35)
         Me.btnGrabar.TabIndex = 18
@@ -49,7 +49,7 @@ Partial Class bloqueodecuentas
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.Location = New System.Drawing.Point(547, 78)
+        Me.btnLimpiar.Location = New System.Drawing.Point(837, 65)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(75, 32)
         Me.btnLimpiar.TabIndex = 19
@@ -73,17 +73,25 @@ Partial Class bloqueodecuentas
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(524, 338)
+        Me.GroupBox1.Size = New System.Drawing.Size(802, 585)
         Me.GroupBox1.TabIndex = 20
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "DATOS "
+        '
+        'txtVendedor
+        '
+        Me.txtVendedor.Location = New System.Drawing.Point(140, 53)
+        Me.txtVendedor.Name = "txtVendedor"
+        Me.txtVendedor.ReadOnly = True
+        Me.txtVendedor.Size = New System.Drawing.Size(367, 20)
+        Me.txtVendedor.TabIndex = 32
         '
         'txtSancion
         '
         Me.txtSancion.Enabled = False
         Me.txtSancion.Location = New System.Drawing.Point(140, 172)
         Me.txtSancion.Name = "txtSancion"
-        Me.txtSancion.Size = New System.Drawing.Size(353, 20)
+        Me.txtSancion.Size = New System.Drawing.Size(367, 20)
         Me.txtSancion.TabIndex = 31
         '
         'txtRazonBloqueo
@@ -91,7 +99,7 @@ Partial Class bloqueodecuentas
         Me.txtRazonBloqueo.Location = New System.Drawing.Point(140, 200)
         Me.txtRazonBloqueo.Multiline = True
         Me.txtRazonBloqueo.Name = "txtRazonBloqueo"
-        Me.txtRazonBloqueo.Size = New System.Drawing.Size(353, 52)
+        Me.txtRazonBloqueo.Size = New System.Drawing.Size(634, 348)
         Me.txtRazonBloqueo.TabIndex = 30
         '
         'Label4
@@ -109,21 +117,21 @@ Partial Class bloqueodecuentas
         Me.cboSancion.FormattingEnabled = True
         Me.cboSancion.Location = New System.Drawing.Point(140, 145)
         Me.cboSancion.Name = "cboSancion"
-        Me.cboSancion.Size = New System.Drawing.Size(353, 21)
+        Me.cboSancion.Size = New System.Drawing.Size(367, 21)
         Me.cboSancion.TabIndex = 27
         '
         'txtPersonaje
         '
         Me.txtPersonaje.Location = New System.Drawing.Point(140, 115)
         Me.txtPersonaje.Name = "txtPersonaje"
-        Me.txtPersonaje.Size = New System.Drawing.Size(165, 20)
+        Me.txtPersonaje.Size = New System.Drawing.Size(367, 20)
         Me.txtPersonaje.TabIndex = 26
         '
         'txtLogin
         '
         Me.txtLogin.Location = New System.Drawing.Point(140, 83)
         Me.txtLogin.Name = "txtLogin"
-        Me.txtLogin.Size = New System.Drawing.Size(165, 20)
+        Me.txtLogin.Size = New System.Drawing.Size(367, 20)
         Me.txtLogin.TabIndex = 25
         '
         'dtFecha_Bloqueo
@@ -179,19 +187,11 @@ Partial Class bloqueodecuentas
         Me.Label1.TabIndex = 18
         Me.Label1.Text = "FECHA"
         '
-        'txtVendedor
-        '
-        Me.txtVendedor.Location = New System.Drawing.Point(140, 53)
-        Me.txtVendedor.Name = "txtVendedor"
-        Me.txtVendedor.ReadOnly = True
-        Me.txtVendedor.Size = New System.Drawing.Size(165, 20)
-        Me.txtVendedor.TabIndex = 32
-        '
         'bloqueodecuentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(629, 356)
+        Me.ClientSize = New System.Drawing.Size(984, 643)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.btnGrabar)

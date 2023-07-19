@@ -1,7 +1,5 @@
-Imports System.Data.SqlClient
 Imports System.Data
-Imports System.Security.Cryptography
-Imports System.Text
+Imports System.Data.SqlClient
 
 Public Class ClaseUsuario
     Dim cn As New ClaseConexion

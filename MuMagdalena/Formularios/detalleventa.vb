@@ -10,6 +10,7 @@ Public Class detalleventa
     Dim cod_item As Integer = Nothing
     Dim serie As String = Nothing
     Dim bean As BeanDetalleCompleto = Nothing
+
     Private Sub detalleventa_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         txtCodigoVenta.Enabled = False
         MdiParent = menuPrincipal
@@ -50,7 +51,7 @@ Public Class detalleventa
             Me.Dispose()
         End Try
     End Sub
-    Public Sub definirvalores(ByVal cod_item As Integer, ByVal cod_venta As Integer, ByVal serie As String)
+    Public Sub definirvalores(cod_item As Integer, cod_venta As Integer, serie As String)
         Me.cod_item = cod_item
         Me.cod_venta = cod_venta
         Me.serie = serie
@@ -66,9 +67,5 @@ Public Class detalleventa
 
     Private Sub item_mensaje(ByVal mensaje As String) Handles item.mensaje
         MessageBox.Show(mensaje, "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-    End Sub
-
-    Private Sub txtObservacion_TextChanged(sender As Object, e As EventArgs) Handles txtObservacion.TextChanged
-
     End Sub
 End Class

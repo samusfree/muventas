@@ -19,12 +19,12 @@ Partial Class consultabloqueo
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.txtLogin = New System.Windows.Forms.TextBox
-        Me.btnBLogin = New System.Windows.Forms.Button
-        Me.btnToos = New System.Windows.Forms.Button
-        Me.btnCancelar = New System.Windows.Forms.Button
-        Me.dgBloqueo = New System.Windows.Forms.DataGridView
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtLogin = New System.Windows.Forms.TextBox()
+        Me.btnBLogin = New System.Windows.Forms.Button()
+        Me.btnToos = New System.Windows.Forms.Button()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.dgBloqueo = New System.Windows.Forms.DataGridView()
         CType(Me.dgBloqueo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -76,14 +76,14 @@ Partial Class consultabloqueo
         Me.dgBloqueo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgBloqueo.Location = New System.Drawing.Point(12, 51)
         Me.dgBloqueo.Name = "dgBloqueo"
-        Me.dgBloqueo.Size = New System.Drawing.Size(706, 480)
+        Me.dgBloqueo.Size = New System.Drawing.Size(763, 456)
         Me.dgBloqueo.TabIndex = 5
         '
         'consultabloqueo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(730, 543)
+        Me.ClientSize = New System.Drawing.Size(980, 651)
         Me.Controls.Add(Me.dgBloqueo)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnToos)

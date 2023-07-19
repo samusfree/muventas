@@ -11,7 +11,9 @@ Public Class desbloqueocuentas
     End Sub
 
     Private Sub desbloqueocuentas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Me.MdiParent = menuPrincipal
+        MdiParent = menuPrincipal
+        WindowState = 2
+
         Try
             bean = bloqueo.devolverbloqueo(cod_bloqueo)
             txtCBloqueo.Text = bean.cod_bloqueo

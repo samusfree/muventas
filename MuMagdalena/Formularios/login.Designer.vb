@@ -31,7 +31,7 @@ Partial Class login
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(96, 19)
+        Me.Label1.Location = New System.Drawing.Point(210, 23)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(314, 33)
         Me.Label1.TabIndex = 0
@@ -51,7 +51,7 @@ Partial Class login
         '
         Me.txtCod_usuario.Location = New System.Drawing.Point(216, 96)
         Me.txtCod_usuario.Name = "txtCod_usuario"
-        Me.txtCod_usuario.Size = New System.Drawing.Size(100, 20)
+        Me.txtCod_usuario.Size = New System.Drawing.Size(188, 20)
         Me.txtCod_usuario.TabIndex = 2
         '
         'txtPassword
@@ -59,7 +59,7 @@ Partial Class login
         Me.txtPassword.Location = New System.Drawing.Point(216, 129)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassword.Size = New System.Drawing.Size(100, 20)
+        Me.txtPassword.Size = New System.Drawing.Size(188, 20)
         Me.txtPassword.TabIndex = 3
         '
         'Label3
@@ -73,19 +73,20 @@ Partial Class login
         '
         'btnIngresar
         '
-        Me.btnIngresar.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnIngresar.Location = New System.Drawing.Point(183, 171)
+        Me.btnIngresar.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.btnIngresar.Location = New System.Drawing.Point(226, 197)
         Me.btnIngresar.Name = "btnIngresar"
-        Me.btnIngresar.Size = New System.Drawing.Size(114, 37)
+        Me.btnIngresar.Size = New System.Drawing.Size(189, 45)
         Me.btnIngresar.TabIndex = 5
         Me.btnIngresar.Text = "INGRESAR"
-        Me.btnIngresar.UseVisualStyleBackColor = False
+        Me.btnIngresar.UseVisualStyleBackColor = True
         '
         'login
         '
+        Me.AcceptButton = Me.btnIngresar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(523, 300)
+        Me.ClientSize = New System.Drawing.Size(753, 448)
         Me.Controls.Add(Me.btnIngresar)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtPassword)

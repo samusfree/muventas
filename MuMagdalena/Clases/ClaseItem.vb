@@ -1,5 +1,5 @@
-Imports System.Data.SqlClient
 Imports System.Data
+Imports System.Data.SqlClient
 Public Class claseItem
     Dim cn As New ClaseConexion
     Event mensaje(ByVal mensaje As String)

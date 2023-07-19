@@ -55,16 +55,16 @@ Partial Class actualizarCambioDatos
         '
         'txtDNINue
         '
-        Me.txtDNINue.Location = New System.Drawing.Point(316, 173)
+        Me.txtDNINue.Location = New System.Drawing.Point(484, 173)
         Me.txtDNINue.Name = "txtDNINue"
         Me.txtDNINue.ReadOnly = True
-        Me.txtDNINue.Size = New System.Drawing.Size(274, 20)
+        Me.txtDNINue.Size = New System.Drawing.Size(399, 20)
         Me.txtDNINue.TabIndex = 101
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(313, 147)
+        Me.Label4.Location = New System.Drawing.Point(481, 147)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(116, 13)
         Me.Label4.TabIndex = 100
@@ -75,7 +75,7 @@ Partial Class actualizarCambioDatos
         Me.txtDNIAnt.Location = New System.Drawing.Point(17, 173)
         Me.txtDNIAnt.Name = "txtDNIAnt"
         Me.txtDNIAnt.ReadOnly = True
-        Me.txtDNIAnt.Size = New System.Drawing.Size(274, 20)
+        Me.txtDNIAnt.Size = New System.Drawing.Size(430, 20)
         Me.txtDNIAnt.TabIndex = 99
         '
         'Label7
@@ -92,7 +92,7 @@ Partial Class actualizarCambioDatos
         Me.txtObservacion.Location = New System.Drawing.Point(22, 361)
         Me.txtObservacion.Multiline = True
         Me.txtObservacion.Name = "txtObservacion"
-        Me.txtObservacion.Size = New System.Drawing.Size(662, 83)
+        Me.txtObservacion.Size = New System.Drawing.Size(861, 164)
         Me.txtObservacion.TabIndex = 97
         '
         'txtMTCN
@@ -100,7 +100,7 @@ Partial Class actualizarCambioDatos
         Me.txtMTCN.Location = New System.Drawing.Point(108, 306)
         Me.txtMTCN.Name = "txtMTCN"
         Me.txtMTCN.ReadOnly = True
-        Me.txtMTCN.Size = New System.Drawing.Size(109, 20)
+        Me.txtMTCN.Size = New System.Drawing.Size(200, 20)
         Me.txtMTCN.TabIndex = 96
         '
         'Label15
@@ -116,15 +116,15 @@ Partial Class actualizarCambioDatos
         '
         Me.txtFechaDeposito.Enabled = False
         Me.txtFechaDeposito.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.txtFechaDeposito.Location = New System.Drawing.Point(450, 312)
+        Me.txtFechaDeposito.Location = New System.Drawing.Point(618, 312)
         Me.txtFechaDeposito.Name = "txtFechaDeposito"
-        Me.txtFechaDeposito.Size = New System.Drawing.Size(109, 20)
+        Me.txtFechaDeposito.Size = New System.Drawing.Size(265, 20)
         Me.txtFechaDeposito.TabIndex = 94
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(317, 319)
+        Me.Label11.Location = New System.Drawing.Point(485, 319)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(100, 13)
         Me.Label11.TabIndex = 93
@@ -135,15 +135,15 @@ Partial Class actualizarCambioDatos
         Me.cboModalidadPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboModalidadPago.Enabled = False
         Me.cboModalidadPago.FormattingEnabled = True
-        Me.cboModalidadPago.Location = New System.Drawing.Point(450, 264)
+        Me.cboModalidadPago.Location = New System.Drawing.Point(618, 264)
         Me.cboModalidadPago.Name = "cboModalidadPago"
-        Me.cboModalidadPago.Size = New System.Drawing.Size(144, 21)
+        Me.cboModalidadPago.Size = New System.Drawing.Size(265, 21)
         Me.cboModalidadPago.TabIndex = 92
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(317, 267)
+        Me.Label10.Location = New System.Drawing.Point(485, 267)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(122, 13)
         Me.Label10.TabIndex = 91
@@ -162,7 +162,7 @@ Partial Class actualizarCambioDatos
         Me.txtPagado.Location = New System.Drawing.Point(108, 260)
         Me.txtPagado.Name = "txtPagado"
         Me.txtPagado.ReadOnly = True
-        Me.txtPagado.Size = New System.Drawing.Size(140, 20)
+        Me.txtPagado.Size = New System.Drawing.Size(200, 20)
         Me.txtPagado.TabIndex = 89
         '
         'Label9
@@ -179,7 +179,7 @@ Partial Class actualizarCambioDatos
         Me.txtFecha.Enabled = False
         Me.txtFecha.Location = New System.Drawing.Point(298, 15)
         Me.txtFecha.Name = "txtFecha"
-        Me.txtFecha.Size = New System.Drawing.Size(200, 20)
+        Me.txtFecha.Size = New System.Drawing.Size(273, 20)
         Me.txtFecha.TabIndex = 87
         '
         'Label8
@@ -193,28 +193,28 @@ Partial Class actualizarCambioDatos
         '
         'btnCerrar
         '
-        Me.btnCerrar.Location = New System.Drawing.Point(647, 56)
+        Me.btnCerrar.Location = New System.Drawing.Point(850, 56)
         Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(75, 23)
+        Me.btnCerrar.Size = New System.Drawing.Size(148, 32)
         Me.btnCerrar.TabIndex = 85
         Me.btnCerrar.Text = "CERRAR"
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
         'btnAnular
         '
-        Me.btnAnular.Location = New System.Drawing.Point(647, 20)
+        Me.btnAnular.Location = New System.Drawing.Point(850, 17)
         Me.btnAnular.Name = "btnAnular"
-        Me.btnAnular.Size = New System.Drawing.Size(75, 23)
+        Me.btnAnular.Size = New System.Drawing.Size(148, 30)
         Me.btnAnular.TabIndex = 84
         Me.btnAnular.Text = "ANULAR"
         Me.btnAnular.UseVisualStyleBackColor = True
         '
         'txtProdNuevo
         '
-        Me.txtProdNuevo.Location = New System.Drawing.Point(316, 104)
+        Me.txtProdNuevo.Location = New System.Drawing.Point(484, 104)
         Me.txtProdNuevo.Name = "txtProdNuevo"
         Me.txtProdNuevo.ReadOnly = True
-        Me.txtProdNuevo.Size = New System.Drawing.Size(274, 20)
+        Me.txtProdNuevo.Size = New System.Drawing.Size(399, 20)
         Me.txtProdNuevo.TabIndex = 83
         '
         'txtProAnt
@@ -222,7 +222,7 @@ Partial Class actualizarCambioDatos
         Me.txtProAnt.Location = New System.Drawing.Point(17, 104)
         Me.txtProAnt.Name = "txtProAnt"
         Me.txtProAnt.ReadOnly = True
-        Me.txtProAnt.Size = New System.Drawing.Size(274, 20)
+        Me.txtProAnt.Size = New System.Drawing.Size(430, 20)
         Me.txtProAnt.TabIndex = 82
         '
         'txtID
@@ -230,13 +230,13 @@ Partial Class actualizarCambioDatos
         Me.txtID.Location = New System.Drawing.Point(103, 53)
         Me.txtID.Name = "txtID"
         Me.txtID.ReadOnly = True
-        Me.txtID.Size = New System.Drawing.Size(140, 20)
+        Me.txtID.Size = New System.Drawing.Size(344, 20)
         Me.txtID.TabIndex = 81
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(313, 88)
+        Me.Label6.Location = New System.Drawing.Point(481, 88)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(121, 13)
         Me.Label6.TabIndex = 80
@@ -271,16 +271,16 @@ Partial Class actualizarCambioDatos
         '
         'txtCorreoNuevo
         '
-        Me.txtCorreoNuevo.Location = New System.Drawing.Point(321, 231)
+        Me.txtCorreoNuevo.Location = New System.Drawing.Point(489, 231)
         Me.txtCorreoNuevo.Name = "txtCorreoNuevo"
         Me.txtCorreoNuevo.ReadOnly = True
-        Me.txtCorreoNuevo.Size = New System.Drawing.Size(274, 20)
+        Me.txtCorreoNuevo.Size = New System.Drawing.Size(394, 20)
         Me.txtCorreoNuevo.TabIndex = 105
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(318, 205)
+        Me.Label5.Location = New System.Drawing.Point(486, 205)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(94, 13)
         Me.Label5.TabIndex = 104
@@ -291,7 +291,7 @@ Partial Class actualizarCambioDatos
         Me.txtCorreoAnt.Location = New System.Drawing.Point(22, 231)
         Me.txtCorreoAnt.Name = "txtCorreoAnt"
         Me.txtCorreoAnt.ReadOnly = True
-        Me.txtCorreoAnt.Size = New System.Drawing.Size(274, 20)
+        Me.txtCorreoAnt.Size = New System.Drawing.Size(425, 20)
         Me.txtCorreoAnt.TabIndex = 103
         '
         'Label12
@@ -307,7 +307,7 @@ Partial Class actualizarCambioDatos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(743, 487)
+        Me.ClientSize = New System.Drawing.Size(1260, 671)
         Me.Controls.Add(Me.txtCorreoNuevo)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtCorreoAnt)

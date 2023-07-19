@@ -1,5 +1,5 @@
-Imports System.Threading
 Imports System.Globalization
+Imports System.Threading
 Imports System.Windows.Forms
 
 Public Class actualizarDetalle
@@ -9,10 +9,13 @@ Public Class actualizarDetalle
     Dim cod_venta As Integer = Nothing
     Dim cod_item As Integer = Nothing
     Dim serie As String = Nothing
+    Private llamador As Integer = 0
     Dim bean As BeanDetalleCompleto = Nothing
 
     Private Sub actualizarDetalle_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
-        ventaxID.borrardgventas()
+        If llamador = 1 Then
+            ventaxID.mostarInformacion()
+        End If
     End Sub
     Private Sub actualizarDetalle_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Try
@@ -77,10 +80,11 @@ Public Class actualizarDetalle
             ' Me.Dispose()
         End Try
     End Sub
-    Public Sub definirvalores(ByVal cod_item As Integer, ByVal cod_venta As Integer, ByVal serie As String)
+    Public Sub definirvalores(ByVal cod_item As Integer, ByVal cod_venta As Integer, ByVal serie As String, llamador As Integer)
         Me.cod_item = cod_item
         Me.cod_venta = cod_venta
         Me.serie = serie
+        Me.llamador = llamador
     End Sub
 
     Private Sub venta_confirmacion(ByVal contenido As String) Handles venta.confirmacion
@@ -97,16 +101,16 @@ Public Class actualizarDetalle
 
     Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
         Me.Dispose()
-        ventaxID.borrardgventas()
+        ''ventaxID.mostarInformacion()
     End Sub
 
     Private Sub btnCambiar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCambiar.Click
-        Dim opcion As Integer = MessageBox.Show("Desea Poner el Item o Set para Cambio", "Confirmación", _
+        Dim opcion As Integer = MessageBox.Show("Desea Poner el Item o Set para Cambio", "Confirmación",
                MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
         If opcion = 1 Then
             Try
-                venta.cambiarventa(bean.cod_venta, cod_item, bean.serie)
-                MessageBox.Show("Item Para Cambio", "Mensaje de Confirmacion", _
+                venta.cambiarventa(bean.cod_venta)
+                MessageBox.Show("Item Para Cambio", "Mensaje de Confirmacion",
                 MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
             End Try

@@ -59,7 +59,7 @@ Partial Class detalleventa
         Me.cboItem.FormattingEnabled = True
         Me.cboItem.Location = New System.Drawing.Point(105, 61)
         Me.cboItem.Name = "cboItem"
-        Me.cboItem.Size = New System.Drawing.Size(121, 21)
+        Me.cboItem.Size = New System.Drawing.Size(370, 21)
         Me.cboItem.TabIndex = 61
         '
         'txtObservacion
@@ -69,7 +69,7 @@ Partial Class detalleventa
         Me.txtObservacion.Name = "txtObservacion"
         Me.txtObservacion.ReadOnly = True
         Me.txtObservacion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtObservacion.Size = New System.Drawing.Size(399, 127)
+        Me.txtObservacion.Size = New System.Drawing.Size(785, 226)
         Me.txtObservacion.TabIndex = 59
         '
         'Label13
@@ -86,7 +86,7 @@ Partial Class detalleventa
         Me.txtCantidad.Enabled = False
         Me.txtCantidad.Location = New System.Drawing.Point(105, 146)
         Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.Size = New System.Drawing.Size(100, 20)
+        Me.txtCantidad.Size = New System.Drawing.Size(203, 20)
         Me.txtCantidad.TabIndex = 57
         '
         'Label12
@@ -103,7 +103,7 @@ Partial Class detalleventa
         Me.txtNombreApellido.Enabled = False
         Me.txtNombreApellido.Location = New System.Drawing.Point(141, 172)
         Me.txtNombreApellido.Name = "txtNombreApellido"
-        Me.txtNombreApellido.Size = New System.Drawing.Size(174, 20)
+        Me.txtNombreApellido.Size = New System.Drawing.Size(334, 20)
         Me.txtNombreApellido.TabIndex = 55
         '
         'Label11
@@ -118,15 +118,15 @@ Partial Class detalleventa
         'txtEstado
         '
         Me.txtEstado.Enabled = False
-        Me.txtEstado.Location = New System.Drawing.Point(419, 139)
+        Me.txtEstado.Location = New System.Drawing.Point(623, 143)
         Me.txtEstado.Name = "txtEstado"
-        Me.txtEstado.Size = New System.Drawing.Size(100, 20)
+        Me.txtEstado.Size = New System.Drawing.Size(249, 20)
         Me.txtEstado.TabIndex = 53
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(318, 146)
+        Me.Label10.Location = New System.Drawing.Point(522, 150)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(51, 13)
         Me.Label10.TabIndex = 52
@@ -135,15 +135,15 @@ Partial Class detalleventa
         'txtModalidad
         '
         Me.txtModalidad.Enabled = False
-        Me.txtModalidad.Location = New System.Drawing.Point(419, 104)
+        Me.txtModalidad.Location = New System.Drawing.Point(623, 108)
         Me.txtModalidad.Name = "txtModalidad"
-        Me.txtModalidad.Size = New System.Drawing.Size(100, 20)
+        Me.txtModalidad.Size = New System.Drawing.Size(249, 20)
         Me.txtModalidad.TabIndex = 51
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(318, 107)
+        Me.Label9.Location = New System.Drawing.Point(522, 111)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(71, 13)
         Me.Label9.TabIndex = 50
@@ -152,15 +152,15 @@ Partial Class detalleventa
         'txtFechaVenta
         '
         Me.txtFechaVenta.Enabled = False
-        Me.txtFechaVenta.Location = New System.Drawing.Point(419, 71)
+        Me.txtFechaVenta.Location = New System.Drawing.Point(623, 75)
         Me.txtFechaVenta.Name = "txtFechaVenta"
-        Me.txtFechaVenta.Size = New System.Drawing.Size(100, 20)
+        Me.txtFechaVenta.Size = New System.Drawing.Size(249, 20)
         Me.txtFechaVenta.TabIndex = 49
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(318, 71)
+        Me.Label8.Location = New System.Drawing.Point(522, 75)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(81, 13)
         Me.Label8.TabIndex = 48
@@ -168,15 +168,15 @@ Partial Class detalleventa
         '
         'txtLogin
         '
-        Me.txtLogin.Location = New System.Drawing.Point(419, 37)
+        Me.txtLogin.Location = New System.Drawing.Point(623, 41)
         Me.txtLogin.Name = "txtLogin"
-        Me.txtLogin.Size = New System.Drawing.Size(100, 20)
+        Me.txtLogin.Size = New System.Drawing.Size(249, 20)
         Me.txtLogin.TabIndex = 47
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(318, 40)
+        Me.Label7.Location = New System.Drawing.Point(522, 44)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(18, 13)
         Me.Label7.TabIndex = 46
@@ -185,15 +185,15 @@ Partial Class detalleventa
         'txtVendedor
         '
         Me.txtVendedor.Enabled = False
-        Me.txtVendedor.Location = New System.Drawing.Point(419, 4)
+        Me.txtVendedor.Location = New System.Drawing.Point(623, 8)
         Me.txtVendedor.Name = "txtVendedor"
-        Me.txtVendedor.Size = New System.Drawing.Size(100, 20)
+        Me.txtVendedor.Size = New System.Drawing.Size(249, 20)
         Me.txtVendedor.TabIndex = 45
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(318, 9)
+        Me.Label6.Location = New System.Drawing.Point(522, 13)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(68, 13)
         Me.Label6.TabIndex = 44
@@ -204,7 +204,7 @@ Partial Class detalleventa
         Me.txtPrecioVenta.Enabled = False
         Me.txtPrecioVenta.Location = New System.Drawing.Point(105, 115)
         Me.txtPrecioVenta.Name = "txtPrecioVenta"
-        Me.txtPrecioVenta.Size = New System.Drawing.Size(100, 20)
+        Me.txtPrecioVenta.Size = New System.Drawing.Size(203, 20)
         Me.txtPrecioVenta.TabIndex = 41
         '
         'Label5
@@ -220,7 +220,7 @@ Partial Class detalleventa
         '
         Me.txtSerie.Location = New System.Drawing.Point(105, 89)
         Me.txtSerie.Name = "txtSerie"
-        Me.txtSerie.Size = New System.Drawing.Size(100, 20)
+        Me.txtSerie.Size = New System.Drawing.Size(203, 20)
         Me.txtSerie.TabIndex = 39
         '
         'Label4
@@ -246,7 +246,7 @@ Partial Class detalleventa
         Me.txtCodigoVenta.Enabled = False
         Me.txtCodigoVenta.Location = New System.Drawing.Point(105, 6)
         Me.txtCodigoVenta.Name = "txtCodigoVenta"
-        Me.txtCodigoVenta.Size = New System.Drawing.Size(100, 20)
+        Me.txtCodigoVenta.Size = New System.Drawing.Size(370, 20)
         Me.txtCodigoVenta.TabIndex = 36
         '
         'Label2
@@ -264,7 +264,7 @@ Partial Class detalleventa
         Me.CboTipoItem.FormattingEnabled = True
         Me.CboTipoItem.Location = New System.Drawing.Point(105, 32)
         Me.CboTipoItem.Name = "CboTipoItem"
-        Me.CboTipoItem.Size = New System.Drawing.Size(121, 21)
+        Me.CboTipoItem.Size = New System.Drawing.Size(370, 21)
         Me.CboTipoItem.TabIndex = 34
         '
         'Label1
@@ -279,7 +279,7 @@ Partial Class detalleventa
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(321, 181)
+        Me.Label14.Location = New System.Drawing.Point(525, 185)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(58, 13)
         Me.Label14.TabIndex = 62
@@ -288,23 +288,23 @@ Partial Class detalleventa
         'txtMTCN
         '
         Me.txtMTCN.Enabled = False
-        Me.txtMTCN.Location = New System.Drawing.Point(419, 173)
+        Me.txtMTCN.Location = New System.Drawing.Point(623, 177)
         Me.txtMTCN.Name = "txtMTCN"
-        Me.txtMTCN.Size = New System.Drawing.Size(100, 20)
+        Me.txtMTCN.Size = New System.Drawing.Size(249, 20)
         Me.txtMTCN.TabIndex = 63
         '
         'txtFechaDepo
         '
-        Me.txtFechaDepo.Location = New System.Drawing.Point(419, 204)
+        Me.txtFechaDepo.Location = New System.Drawing.Point(623, 208)
         Me.txtFechaDepo.Name = "txtFechaDepo"
         Me.txtFechaDepo.ReadOnly = True
-        Me.txtFechaDepo.Size = New System.Drawing.Size(100, 20)
+        Me.txtFechaDepo.Size = New System.Drawing.Size(249, 20)
         Me.txtFechaDepo.TabIndex = 65
         '
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(321, 207)
+        Me.Label15.Location = New System.Drawing.Point(525, 211)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(100, 13)
         Me.Label15.TabIndex = 64
@@ -331,7 +331,7 @@ Partial Class detalleventa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(562, 374)
+        Me.ClientSize = New System.Drawing.Size(1008, 537)
         Me.Controls.Add(Me.txtNivel)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.txtFechaDepo)

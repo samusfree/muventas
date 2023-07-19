@@ -37,7 +37,7 @@ Partial Class cambionombrefechas
         Me.dgResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgResultado.Location = New System.Drawing.Point(23, 69)
         Me.dgResultado.Name = "dgResultado"
-        Me.dgResultado.Size = New System.Drawing.Size(727, 463)
+        Me.dgResultado.Size = New System.Drawing.Size(966, 457)
         Me.dgResultado.TabIndex = 13
         '
         'Label1
@@ -94,7 +94,7 @@ Partial Class cambionombrefechas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(790, 552)
+        Me.ClientSize = New System.Drawing.Size(1260, 671)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.dtFechaFin)

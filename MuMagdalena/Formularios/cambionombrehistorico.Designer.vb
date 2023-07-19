@@ -37,7 +37,7 @@ Partial Class cambionombrehistorico
         Me.dgResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgResultado.Location = New System.Drawing.Point(12, 39)
         Me.dgResultado.Name = "dgResultado"
-        Me.dgResultado.Size = New System.Drawing.Size(727, 486)
+        Me.dgResultado.Size = New System.Drawing.Size(978, 487)
         Me.dgResultado.TabIndex = 13
         '
         'btnIDAnt
@@ -96,7 +96,7 @@ Partial Class cambionombrehistorico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(771, 541)
+        Me.ClientSize = New System.Drawing.Size(1260, 671)
         Me.Controls.Add(Me.dgResultado)
         Me.Controls.Add(Me.btnIDAnt)
         Me.Controls.Add(Me.btnIAct)

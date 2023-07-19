@@ -1,4 +1,5 @@
 ﻿
+Imports System.Data
 Imports System.Windows.Forms
 
 Public Class agregarDetalleItemsVenta
@@ -13,8 +14,18 @@ Public Class agregarDetalleItemsVenta
 
     Public Sub listar()
         dgItems.AutoGenerateColumns = False
-        dgItems.DataSource = itemDAO.devolverListaItemsHijos(idItem)
-        dgItems.EditMode = DataGridViewEditMode.EditOnEnter
+        Dim dataTable As DataTable = itemDAO.devolverListaItemsHijos(idItem)
+        dataTable.Columns.Add("serie", GetType(String))
+        dataTable.Columns.Add("precionuevo", GetType(String))
+        dataTable.Columns("serie").ReadOnly = False
+        dataTable.Columns("precionuevo").ReadOnly = False
+        dgItems.DataSource = dataTable
+        dgItems.EditMode = DataGridViewEditMode.EditOnKeystroke
+        For Each row As DataGridViewRow In dgItems.Rows
+            row.Cells("serie").Value = 0
+            row.Cells("precio").Value = 0
+        Next
+
     End Sub
 
     Private Sub agregarDetalleItemsVenta_Load(sender As Object, e As EventArgs) Handles Me.Load
