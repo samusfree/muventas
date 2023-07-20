@@ -156,9 +156,7 @@
     <Compile Include="Formularios\cambionombrefechas.Designer.vb">
       <DependentUpon>cambionombrefechas.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\cambionombrefechas.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Formularios\cambionombrefechas.vb" />
     <Compile Include="Formularios\cambionombrehistorico.Designer.vb">
       <DependentUpon>cambionombrehistorico.vb</DependentUpon>
     </Compile>

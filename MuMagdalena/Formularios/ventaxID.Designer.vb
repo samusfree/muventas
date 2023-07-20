@@ -75,7 +75,7 @@ Partial Class ventaxID
         Me.dgVentas.Name = "dgVentas"
         Me.dgVentas.ReadOnly = True
         Me.dgVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgVentas.Size = New System.Drawing.Size(1227, 614)
+        Me.dgVentas.Size = New System.Drawing.Size(1112, 511)
         Me.dgVentas.TabIndex = 4
         '
         'btnSerie
@@ -99,7 +99,7 @@ Partial Class ventaxID
         'btnCambio
         '
         Me.btnCambio.BackColor = System.Drawing.Color.SteelBlue
-        Me.btnCambio.Location = New System.Drawing.Point(1125, 5)
+        Me.btnCambio.Location = New System.Drawing.Point(997, 5)
         Me.btnCambio.Name = "btnCambio"
         Me.btnCambio.Size = New System.Drawing.Size(127, 39)
         Me.btnCambio.TabIndex = 9
@@ -111,7 +111,7 @@ Partial Class ventaxID
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.ClientSize = New System.Drawing.Size(1136, 578)
         Me.Controls.Add(Me.btnCambio)
         Me.Controls.Add(Me.btnVentasMTCN)
         Me.Controls.Add(Me.btnSerie)

@@ -39,7 +39,7 @@ Partial Class ventasxidhistorico
         Me.dgVentas.Location = New System.Drawing.Point(28, 110)
         Me.dgVentas.Name = "dgVentas"
         Me.dgVentas.ReadOnly = True
-        Me.dgVentas.Size = New System.Drawing.Size(1224, 609)
+        Me.dgVentas.Size = New System.Drawing.Size(1044, 494)
         Me.dgVentas.TabIndex = 9
         '
         'btnLimpiar
@@ -98,7 +98,7 @@ Partial Class ventasxidhistorico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.ClientSize = New System.Drawing.Size(1084, 616)
         Me.Controls.Add(Me.btnMTCN)
         Me.Controls.Add(Me.btnserie)
         Me.Controls.Add(Me.dgVentas)

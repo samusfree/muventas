@@ -56,6 +56,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -217,13 +225,13 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Sistema Ventas Magdalena"
         "ProductCode" = "8:{C5BFFE2D-DED3-4D36-A872-8894E18E1FE2}"
-        "PackageCode" = "8:{C4F9AFF6-99C7-4A85-9730-0B62FC046245}"
+        "PackageCode" = "8:{A19D964B-3B14-45AE-B413-D312BF86464A}"
         "UpgradeCode" = "8:{F291109A-6A07-4315-A225-3A58DFA956EB}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
-        "InstallAllUsers" = "11:FALSE"
+        "InstallAllUsers" = "11:TRUE"
         "ProductVersion" = "8:1.0.0"
         "Manufacturer" = "8:MuMagdalena"
         "ARPHELPTELEPHONE" = "8:"
